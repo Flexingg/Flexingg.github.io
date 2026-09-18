@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jonathan Randall — Mechanical Engineer</title>
-<meta name="description" content="Mechanical engineer resume with interactive CAD viewer, project explorer, and live engineering calculators." />
+<title>Jonathan Randall — Senior Mechanical & Systems Engineer</title>
+<meta name="description" content="Jonathan Randall - Senior Mechanical Engineer specializing in Engineering Management ($4.3M CapEx), Systems Engineering, and Critical Infrastructure & Data Center Engineering." />
 <link rel="stylesheet" href="css/main.css" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script type="importmap">
 {
@@ -20,104 +21,178 @@
 
 <header class="site-header">
   <nav class="site-nav">
-    <div class="brand" id="nav-brand">Loading…</div>
+    <div class="brand" id="nav-brand">Jonathan Randall</div>
     <div class="links">
       <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#thermal">Cooling Calc</a>
+      <a href="#calculator">Beam Calc</a>
       <a href="#cad">CAD Viewer</a>
-      <a href="#calculator">Calculator</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
-    <a class="btn btn-small" href="resume-print.html" target="_blank" rel="noopener">Print / PDF view</a>
+    <a class="btn btn-small" href="assets/resume.pdf" target="_blank" rel="noopener">Download PDF</a>
   </nav>
 </header>
 
 <main class="container">
 
+  <!-- Career Path Switcher Bar -->
+  <div class="path-switcher-wrap">
+    <div class="path-switcher-title">Select Career Path Focus:</div>
+    <div class="path-switcher-bar" id="path-switcher" role="tablist" aria-label="Career path switcher">
+      <button class="path-btn active" data-path="all" role="tab" aria-selected="true">
+        <span>🌐</span> All / Core Overview
+      </button>
+      <button class="path-btn" data-path="management" role="tab" aria-selected="false">
+        <span>📊</span> Engineering Management ($4.3M CapEx)
+      </button>
+      <button class="path-btn" data-path="systems" role="tab" aria-selected="false">
+        <span>⚙️</span> Systems Engineering
+      </button>
+      <button class="path-btn" data-path="datacenter" role="tab" aria-selected="false">
+        <span>🏢</span> Data Center & Facilities
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
   <section class="hero" id="top">
-    <div class="placeholder-note">This site is scaffolded with placeholder content — swap in real details in data/resume.json</div>
-    <h1 id="hero-name">—</h1>
-    <div class="title" id="hero-title">—</div>
-    <p class="tagline" id="hero-tagline">—</p>
+    <div class="path-hero-badge" id="hero-badge">Full-Stack Mechanical & Systems Engineer</div>
+    <h1 id="hero-name">Jonathan Randall</h1>
+    <div class="title" id="hero-title">Senior Mechanical Engineer</div>
+    <p class="tagline" id="hero-tagline">Combines mechanical engineering principles with modern programming capabilities to drive operational excellence, cost reduction, and capital project delivery.</p>
     <div class="actions">
-      <a class="btn" id="download-pdf" href="assets/resume.pdf" download>Download PDF Resume</a>
-      <a class="btn btn-ghost" id="link-github" href="#" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn btn-ghost" id="link-linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" id="download-pdf" href="assets/resume.pdf" download="Jonathan_Randall_Resume.pdf">Download PDF Resume</a>
+      <a class="btn btn-ghost" id="link-github" href="https://github.com/Flexingg" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" id="link-portfolio" href="https://resume.randall.engineering/jonathanrandall/mechanical" target="_blank" rel="noopener">Engineering Portfolio</a>
+      <a class="btn btn-ghost" href="resume-print.html" target="_blank" rel="noopener">Print Version</a>
+    </div>
+
+    <!-- KPI Metric Cards -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-num">24</div>
+        <div class="kpi-lbl">Capital Projects ($4.3M)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">24 / 7</div>
+        <div class="kpi-lbl">On-Call Mechanical Authority</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">Nuclear & Plant</div>
+        <div class="kpi-lbl">SRNS & Bridgestone Facilities</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">3.87 GPA</div>
+        <div class="kpi-lbl">B.S. Mechanical Engineering</div>
+      </div>
     </div>
   </section>
 
+  <!-- Summary / About -->
   <section id="about">
     <div class="section-head">
-      <div class="eyebrow">About</div>
-      <h2>Summary</h2>
+      <div class="eyebrow">Professional Summary</div>
+      <h2>Executive Profile</h2>
     </div>
-    <p id="summary-text" class="card"></p>
+    <p id="summary-text" class="card" style="font-size: 1.02rem; line-height: 1.7;"></p>
   </section>
 
+  <!-- Experience -->
   <section id="experience">
     <div class="section-head">
-      <div class="eyebrow">Career</div>
-      <h2>Experience</h2>
+      <div class="eyebrow">Career History</div>
+      <h2>Engineering Experience</h2>
+      <p>Highlighted bullets automatically spotlight achievements matching your selected career path.</p>
     </div>
     <div class="timeline" id="experience-list"></div>
   </section>
 
+  <!-- Skills -->
   <section id="skills">
     <div class="section-head">
-      <div class="eyebrow">Capabilities</div>
-      <h2>Skills</h2>
-      <p>Core competencies at a glance, plus a detailed breakdown by discipline.</p>
+      <div class="eyebrow">Core Capabilities</div>
+      <h2>Skills & Competencies</h2>
+      <p>Dynamic radar visualization updates based on active career track focus.</p>
     </div>
     <div class="skills-grid">
       <div class="card">
+        <h4 style="margin: 0 0 14px; font-size: 0.95rem;">Competency Focus</h4>
         <canvas id="skills-radar" height="260"></canvas>
       </div>
       <div id="skills-categories"></div>
     </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects">
     <div class="section-head">
-      <div class="eyebrow">Portfolio</div>
-      <h2>Project Explorer</h2>
-      <p>Filter by discipline, click a card for details.</p>
+      <div class="eyebrow">Project Portfolio</div>
+      <h2>Engineering Programs & Interactive Tools</h2>
+      <p>Filter by discipline or track. Click any project card for complete scope and highlights.</p>
     </div>
     <div class="filter-bar" id="project-filters"></div>
     <div class="project-grid" id="project-grid"></div>
   </section>
 
-  <section id="cad">
+  <!-- Critical Facilities & Data Center Thermal Calculator -->
+  <section id="thermal">
     <div class="section-head">
-      <div class="eyebrow">Interactive</div>
-      <h2>Parametric CAD Viewer</h2>
-      <p>A simplified pillow-block bracket assembly, built from primitives — drag to orbit, scroll to zoom. Swap in a real STL/STEP model once you have one worth showing.</p>
+      <div class="eyebrow">Interactive Systems Tool</div>
+      <h2>Data Center & Critical Facilities Thermal Calculator</h2>
+      <p>First-principles thermodynamics (Q = m &middot; Cp &middot; &Delta;T) modeling cooling airflow requirements (CFM), heat rejection, and PUE energy savings.</p>
     </div>
-    <div class="cad-wrap">
-      <div id="cad-canvas-holder">
-        <span class="cad-hint">drag to orbit · scroll to zoom</span>
-      </div>
-      <div class="cad-controls card">
-        <div>
-          <label for="cad-explode">Explode view</label>
-          <input type="range" id="cad-explode" min="0" max="1" step="0.01" value="0" />
+    <div class="calc-wrap">
+      <form class="calc-form card" id="thermal-form">
+        <div class="field">
+          <label for="thermal-it-load">Critical IT / Equipment Load (kW)</label>
+          <input type="number" id="thermal-it-load" value="500" min="10" max="50000" step="50" />
         </div>
-        <div>
-          <label><input type="checkbox" id="cad-wireframe" /> Wireframe</label>
+        <div class="field">
+          <label for="thermal-delta-t">Temperature Rise &Delta;T (&deg;F)</label>
+          <input type="number" id="thermal-delta-t" value="20" min="5" max="50" step="1" />
         </div>
-        <div>
-          <label><input type="checkbox" id="cad-autorotate" /> Auto-rotate</label>
+        <div class="field">
+          <label for="thermal-pue">Facility Target PUE</label>
+          <input type="number" id="thermal-pue" value="1.25" min="1.05" max="2.0" step="0.01" />
         </div>
-        <button class="btn btn-ghost btn-small" id="cad-reset">Reset view</button>
+        <div class="field">
+          <label for="thermal-rate">Electricity Rate ($/kWh)</label>
+          <input type="number" id="thermal-rate" value="0.08" min="0.01" max="0.50" step="0.01" />
+        </div>
+      </form>
+      <div>
+        <div class="calc-results">
+          <div class="calc-result-tile">
+            <div class="num" id="thermal-cfm-result">–</div>
+            <div class="lbl">Required Airflow</div>
+          </div>
+          <div class="calc-result-tile">
+            <div class="num" id="thermal-tonnage-result">–</div>
+            <div class="lbl">Cooling Capacity</div>
+          </div>
+          <div class="calc-result-tile">
+            <div class="num" id="thermal-total-power-result">–</div>
+            <div class="lbl">Total Facility Power</div>
+          </div>
+          <div class="calc-result-tile">
+            <div class="num" id="thermal-savings-result">–</div>
+            <div class="lbl">Annual PUE Savings</div>
+          </div>
+        </div>
+        <canvas id="thermal-canvas"></canvas>
       </div>
     </div>
   </section>
 
+  <!-- Euler-Bernoulli Beam Calculator -->
   <section id="calculator">
     <div class="section-head">
-      <div class="eyebrow">Interactive</div>
-      <h2>Beam Deflection Calculator</h2>
-      <p>Closed-form Euler-Bernoulli solution for a rectangular-section beam. Change any input and the diagram updates live.</p>
+      <div class="eyebrow">Interactive Structural Tool</div>
+      <h2>Euler-Bernoulli Beam Deflection Calculator</h2>
+      <p>Closed-form mechanics solution for rectangular-section beams with real-time deflection curve rendering.</p>
     </div>
     <div class="calc-wrap">
       <form class="calc-form card" id="beam-form">
@@ -185,34 +260,73 @@
     </div>
   </section>
 
+  <!-- 3D CAD Viewer -->
+  <section id="cad">
+    <div class="section-head">
+      <div class="eyebrow">Interactive CAD Tool</div>
+      <h2>Parametric CAD Assembly Viewer</h2>
+      <p>Browser-based Three.js mechanical assembly (pillow-block bearing, base plate, shaft, fasteners). Drag to orbit, scroll to zoom, or adjust kinematic explode view.</p>
+    </div>
+    <div class="cad-wrap">
+      <div id="cad-canvas-holder">
+        <span class="cad-hint">drag to orbit &middot; scroll to zoom</span>
+      </div>
+      <div class="cad-controls card">
+        <div>
+          <label for="cad-explode">Explode view</label>
+          <input type="range" id="cad-explode" min="0" max="1" step="0.01" value="0" />
+        </div>
+        <div>
+          <label><input type="checkbox" id="cad-wireframe" /> Wireframe</label>
+        </div>
+        <div>
+          <label><input type="checkbox" id="cad-autorotate" /> Auto-rotate</label>
+        </div>
+        <button class="btn btn-ghost btn-small" id="cad-reset">Reset view</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & References -->
   <section id="education">
     <div class="section-head">
-      <div class="eyebrow">Background</div>
-      <h2>Education & Certifications</h2>
+      <div class="eyebrow">Credentials & Network</div>
+      <h2>Education & Professional References</h2>
     </div>
     <div class="timeline" id="education-list"></div>
-    <ul id="certifications-list" style="color:var(--text-dim); margin-top:16px;"></ul>
+
+    <div style="margin-top: 36px;">
+      <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Professional References</h3>
+      <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:14px;">Verified references from industrial manufacturing and maintenance leadership.</p>
+      <div class="reference-grid" id="reference-list"></div>
+    </div>
   </section>
 
 </main>
 
+<!-- Footer -->
 <footer id="contact">
   <div class="container">
-    <div>Get in touch: <a id="footer-email" href="#"></a></div>
+    <div style="font-size: 1.05rem; font-weight: 600; margin-bottom: 6px;">Jonathan Randall</div>
+    <div>Augusta, GA &middot; 1.864.323.7353 &middot; <a id="footer-email" href="mailto:j03randall@gmail.com">j03randall@gmail.com</a></div>
     <div class="footer-links">
-      <a id="footer-github" href="#" target="_blank" rel="noopener">GitHub</a>
-      <a id="footer-linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a id="footer-github" href="https://github.com/Flexingg" target="_blank" rel="noopener">GitHub</a>
+      <a id="footer-portfolio" href="https://resume.randall.engineering/jonathanrandall/mechanical" target="_blank" rel="noopener">Portfolio</a>
+      <a href="resume-print.html" target="_blank" rel="noopener">Printable Resume</a>
+      <a href="assets/resume.pdf" download="Jonathan_Randall_Resume.pdf">Download PDF</a>
     </div>
-    <div style="margin-top:12px;">&copy; <span id="footer-year"></span></div>
+    <div style="margin-top:16px; font-size:0.8rem; color:var(--text-dim);">&copy; <span id="footer-year"></span> Jonathan Randall. Built with plain HTML/CSS/JS and deployed via GitHub Actions.</div>
   </div>
 </footer>
 
+<!-- Modal for Project Details -->
 <div class="modal-backdrop" id="project-modal-backdrop">
   <div class="modal">
     <button class="close-btn" id="modal-close-btn" aria-label="Close">&times;</button>
     <h3 id="modal-title"></h3>
-    <div class="tag-row" id="modal-tags" style="margin-bottom:12px;"></div>
+    <div class="tag-row" id="modal-tags" style="margin-bottom:14px;"></div>
     <p id="modal-description"></p>
+    <h4 style="font-size: 0.95rem; margin-top: 18px; margin-bottom: 8px;">Key Accomplishments & Scope:</h4>
     <ul id="modal-highlights"></ul>
   </div>
 </div>

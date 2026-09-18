@@ -11,58 +11,84 @@ async function main() {
   const { profile } = data;
 
   const sheet = document.getElementById("sheet");
+  sheet.innerHTML = "";
 
-  sheet.appendChild(el("h1", null, profile.name));
-  sheet.appendChild(el("div", "title", profile.title));
-  sheet.appendChild(
-    el(
-      "div",
-      "contact",
-      `${profile.location} &middot; ${profile.email} &middot; ${profile.phone} &middot; ` +
-        `<a href="${profile.links.github}">${profile.links.github.replace("https://", "")}</a> &middot; ` +
-        `<a href="${profile.links.linkedin}">${profile.links.linkedin.replace("https://", "")}</a>`
-    )
-  );
+  // Header
+  const header = el("div", "resume-header");
+  header.appendChild(el("h1", null, profile.name));
+  header.appendChild(el("div", "title", profile.title));
 
-  sheet.appendChild(el("h2", null, "Summary"));
+  const contactParts = [
+    profile.location,
+    profile.phone,
+    `<a href="mailto:${profile.email}">${profile.email}</a>`,
+  ];
+  if (profile.links.portfolio) {
+    contactParts.push(`<a href="${profile.links.portfolio}">resume.randall.engineering</a>`);
+  }
+  if (profile.links.github) {
+    contactParts.push(`<a href="${profile.links.github}">${profile.links.github.replace("https://", "")}</a>`);
+  }
+
+  header.appendChild(el("div", "contact", contactParts.join(" &middot; ")));
+  sheet.appendChild(header);
+
+  // Summary
+  sheet.appendChild(el("h2", null, "Professional Summary"));
   sheet.appendChild(el("p", "summary", data.summary));
 
+  // Experience
   sheet.appendChild(el("h2", null, "Experience"));
   data.experience.forEach((job) => {
     const entry = el("div", "entry");
-    entry.appendChild(el("div", "entry-head", `<span>${job.role}</span><span>${job.start} – ${job.end}</span>`));
-    entry.appendChild(el("div", "entry-sub", `${job.company} — ${job.location}`));
+    entry.appendChild(el("div", "entry-head", `<span>${job.role} &mdash; <strong>${job.company}</strong></span><span>${job.start} &ndash; ${job.end}</span>`));
+    entry.appendChild(el("div", "entry-sub", job.location));
+
+    if (job.overview) {
+      entry.appendChild(el("div", "entry-overview", job.overview));
+    }
+
     const ul = el("ul");
-    job.bullets.forEach((b) => ul.appendChild(el("li", null, b)));
+    job.bullets.forEach((b) => {
+      const text = typeof b === "string" ? b : b.text;
+      ul.appendChild(el("li", null, text));
+    });
     entry.appendChild(ul);
     sheet.appendChild(entry);
   });
 
+  // Education
   sheet.appendChild(el("h2", null, "Education"));
   data.education.forEach((edu) => {
     const entry = el("div", "entry");
-    entry.appendChild(el("div", "entry-head", `<span>${edu.degree}</span><span>${edu.start} – ${edu.end}</span>`));
-    entry.appendChild(el("div", "entry-sub", edu.school));
-    if (edu.details) entry.appendChild(el("div", null, edu.details));
+    entry.appendChild(el("div", "entry-head", `<span><strong>${edu.school}</strong></span><span>${edu.start} &ndash; ${edu.end}</span>`));
+    entry.appendChild(el("div", "entry-sub", edu.degree));
+    if (edu.details) entry.appendChild(el("div", "edu-details", edu.details));
     sheet.appendChild(entry);
   });
 
-  if (data.certifications && data.certifications.length) {
-    sheet.appendChild(el("h2", null, "Certifications"));
-    const ul = el("ul");
-    data.certifications.forEach((c) => ul.appendChild(el("li", null, c)));
-    sheet.appendChild(ul);
-  }
-
-  sheet.appendChild(el("h2", null, "Skills"));
+  // Skills
+  sheet.appendChild(el("h2", null, "Skills & Competencies"));
   data.skills.categories.forEach((cat) => {
     const line = el(
       "div",
       "skills-line",
-      `<b>${cat.name}:</b> ${cat.items.map((i) => i.label).join(", ")}`
+      `<strong>${cat.name}:</strong> ${cat.items.map((i) => i.label).join(", ")}`
     );
     sheet.appendChild(line);
   });
+
+  // References
+  if (data.references && data.references.length) {
+    sheet.appendChild(el("h2", null, "Professional References"));
+    const refLine = el(
+      "div",
+      "ref-line",
+      data.references.map((r) => `<strong>${r.name}</strong> (${r.title})`).join(" &middot; ") +
+      " &mdash; <em>Contact details available upon request.</em>"
+    );
+    sheet.appendChild(refLine);
+  }
 
   document.getElementById("status").style.display = "none";
   sheet.style.display = "block";

@@ -1,141 +1,313 @@
 {
   "profile": {
     "name": "Jonathan Randall",
-    "title": "Mechanical Engineer",
-    "tagline": "Mechanical engineer who ships software — CAD by day, code by night.",
-    "location": "PLACEHOLDER, USA",
+    "title": "Senior Mechanical & Systems Engineer",
+    "tagline": "Combining mechanical engineering principles with modern software capabilities to drive operational excellence, capital project execution, and 24/7 facility reliability.",
+    "location": "Augusta, GA",
     "email": "j03randall@gmail.com",
-    "phone": "PLACEHOLDER (555) 555-5555",
+    "phone": "1.864.323.7353",
     "links": {
       "github": "https://github.com/Flexingg",
-      "linkedin": "https://www.linkedin.com/in/PLACEHOLDER"
+      "portfolio": "https://resume.randall.engineering/jonathanrandall/mechanical"
     }
   },
-  "summary": "PLACEHOLDER SUMMARY — Mechanical engineer with hands-on plant/manufacturing experience, comfortable moving between CAD, hardware, and code. Builds internal tools (CMMS integrations, project trackers, automation scripts) to solve problems that off-the-shelf software doesn't. Replace this paragraph with 3–4 sentences on your actual background.",
+  "careerPaths": {
+    "all": {
+      "name": "Comprehensive Overview",
+      "shortName": "All",
+      "badge": "Full-Stack Mechanical & Systems Engineer",
+      "title": "Senior Mechanical Engineer",
+      "tagline": "Combines mechanical engineering principles with modern programming capabilities to drive operational excellence, cost reduction, and capital project delivery.",
+      "summary": "Results-driven Senior Mechanical Engineer with experience in industrial manufacturing and nuclear facilities. Demonstrated expertise in project management, machine design, and automated solutions. Combines mechanical engineering principles with modern programming capabilities to drive operational excellence and cost reduction initiatives. Track record of successful project delivery in high-stakes manufacturing environments.",
+      "radar": [
+        { "label": "Machine Design & CAD", "value": 90 },
+        { "label": "Project Mgmt ($4.3M)", "value": 92 },
+        { "label": "Systems & Safety", "value": 88 },
+        { "label": "Thermal & Heat Transfer", "value": 85 },
+        { "label": "Software & Automation", "value": 82 },
+        { "label": "Failure Analysis & GD&T", "value": 86 }
+      ]
+    },
+    "management": {
+      "name": "Engineering Management",
+      "shortName": "Management",
+      "badge": "Engineering Management & CapEx Leader",
+      "title": "Engineering Project Manager & Technical Leader",
+      "tagline": "Delivered 24 capital projects ($4.3M) on schedule and budget, leading cross-functional plant personnel, contractors, and global technical teams.",
+      "summary": "Engineering leader with a proven track record directing $4.3M across 24 concurrent capital projects in high-stakes manufacturing. Expert in full lifecycle CapEx execution—from initial concept and engineering analysis to equipment installation and commissioning. Skilled in cross-functional team leadership, multi-trade contractor oversight, budget/schedule control, enterprise SAP workflows, and technical consultation across international facilities.",
+      "radar": [
+        { "label": "CapEx Mgmt ($4.3M)", "value": 96 },
+        { "label": "Contractor & Team Lead", "value": 92 },
+        { "label": "Budget & Schedule Control", "value": 94 },
+        { "label": "Risk Prevention", "value": 88 },
+        { "label": "Process Equipment", "value": 85 },
+        { "label": "Cross-Facility Consulting", "value": 90 }
+      ]
+    },
+    "systems": {
+      "name": "Systems Engineering",
+      "shortName": "Systems",
+      "badge": "Senior Systems & Process Engineer",
+      "title": "Senior Systems & Process Engineer",
+      "tagline": "Designing safe, high-reliability mechanical and nuclear systems through root-cause failure analysis, GD&T, and process modernization.",
+      "summary": "Systems engineer with foundational experience in nuclear facilities (Savannah River Nuclear Solutions) and continuous process tire manufacturing (Bridgestone). Proven expert in safe system design, root-cause failure analysis, equipment evaluation, and technical risk prevention. Skilled at translating complex cross-departmental requirements into robust mechanical systems, validated through closed-form physical modeling and software automation.",
+      "radar": [
+        { "label": "Safe System Design", "value": 95 },
+        { "label": "Failure Analysis & RCA", "value": 92 },
+        { "label": "GD&T & Machine Design", "value": 88 },
+        { "label": "Process Modernization", "value": 90 },
+        { "label": "Technical Documentation", "value": 88 },
+        { "label": "Multi-Dept Collaboration", "value": 86 }
+      ]
+    },
+    "datacenter": {
+      "name": "Data Center Engineering",
+      "shortName": "Data Center",
+      "badge": "Critical Facilities & Thermal Infrastructure Engineer",
+      "title": "Critical Facilities & Data Center Infrastructure Engineer",
+      "tagline": "Specializing in 24/7 continuous operations, industrial heat transfer & thermal systems, energy efficiency, and mechanical plant reliability.",
+      "summary": "Mechanical and systems engineer specialized in 24/7 mission-critical uptime, industrial heat transfer systems, and facility energy efficiency. Experience includes serving as 24/7 on-call technical expert for plant mechanical systems, thermodynamics and heat transfer research at Savannah River Nuclear Solutions, and predictive maintenance automation. Expert in high-reliability cooling, energy savings opportunities, and mechanical infrastructure resilience.",
+      "radar": [
+        { "label": "24/7 Critical Uptime", "value": 95 },
+        { "label": "Heat Transfer & Cooling", "value": 92 },
+        { "label": "Energy Optimization", "value": 90 },
+        { "label": "Plant Mechanical Reliability", "value": 94 },
+        { "label": "Failure Analysis", "value": 86 },
+        { "label": "Automation & Monitoring", "value": 84 }
+      ]
+    }
+  },
+  "summary": "Results-driven Senior Mechanical Engineer with experience in industrial manufacturing and nuclear facilities. Demonstrated expertise in project management, machine design, and automated solutions. Combines mechanical engineering principles with modern programming capabilities to drive operational excellence and cost reduction initiatives. Track record of successful project delivery in high-stakes manufacturing environments.",
   "experience": [
     {
-      "role": "PLACEHOLDER — Mechanical Engineer",
-      "company": "Placeholder Manufacturing Co.",
-      "location": "Placeholder, USA",
-      "start": "2023",
+      "role": "Senior Mechanical Engineer",
+      "company": "Bridgestone Americas",
+      "location": "Aiken, SC",
+      "start": "July 2022",
       "end": "Present",
+      "overview": "Providing engineering services and support for global rubber mixing manufacturing operations, focusing on equipment evaluation, analysis, design, installation, and maintenance at the Bridgestone Americas Aiken Off Road Radial Tire plant.",
       "bullets": [
-        "Placeholder: designed/maintained mechanical systems for PLACEHOLDER process, replace with a real scope + scale (throughput, tolerance, uptime, etc.)",
-        "Placeholder: built an internal tool (e.g. work-order/CMMS integration) that automated PLACEHOLDER, cutting PLACEHOLDER metric by PLACEHOLDER%",
-        "Placeholder: led PLACEHOLDER project from concept through commissioning, coordinating with PLACEHOLDER stakeholders"
+        {
+          "text": "Managed 24 capital projects ($4.3M) for global manufacturing facilities, ensuring completion within budget and schedule.",
+          "paths": ["management", "datacenter", "systems"]
+        },
+        {
+          "text": "Led design and development of process equipment for facility modernization and expansion.",
+          "paths": ["systems", "management", "datacenter"]
+        },
+        {
+          "text": "Provided technical consultation and support across multiple global manufacturing locations.",
+          "paths": ["management", "systems"]
+        },
+        {
+          "text": "Oversaw contractors, technicians, and plant personnel on multiple concurrent projects.",
+          "paths": ["management"]
+        },
+        {
+          "text": "Developed and implemented equipment/process improvements to enhance quality and efficiency.",
+          "paths": ["systems", "datacenter"]
+        },
+        {
+          "text": "Maintained and updated technical documentation.",
+          "paths": ["systems"]
+        },
+        {
+          "text": "Serve as 24/7 technical expert for plant mechanical systems and risk prevention.",
+          "paths": ["datacenter", "systems"]
+        }
       ]
     },
     {
-      "role": "PLACEHOLDER — Prior Role",
-      "company": "Placeholder Co.",
-      "location": "Placeholder, USA",
-      "start": "2021",
-      "end": "2023",
+      "role": "Systems Engineer",
+      "company": "Savannah River Nuclear Solutions",
+      "location": "Aiken, SC",
+      "start": "January 2022",
+      "end": "July 2022",
+      "overview": "Provided systems engineering for critical nuclear materials processing and facility operations.",
       "bullets": [
-        "Placeholder bullet describing a real accomplishment with a number in it",
-        "Placeholder bullet — tie to a project shown in the explorer below if possible"
+        {
+          "text": "Provided technical expertise to team members from a variety of departments.",
+          "paths": ["management", "systems"]
+        },
+        {
+          "text": "Ensured safe system design and working procedures.",
+          "paths": ["systems", "datacenter"]
+        },
+        {
+          "text": "Researched heat transfer systems and energy savings opportunities.",
+          "paths": ["datacenter", "systems"]
+        },
+        {
+          "text": "Developed continuous improvement projects to reduce maintenance downtime and operational cost.",
+          "paths": ["management", "systems", "datacenter"]
+        }
       ]
     }
   ],
   "education": [
     {
-      "school": "Placeholder University",
-      "degree": "B.S. Mechanical Engineering",
-      "start": "2017",
-      "end": "2021",
-      "details": "Placeholder — relevant coursework, senior design project, honors, etc."
+      "school": "Georgia Southern University",
+      "degree": "Bachelors of Science in Mechanical Engineering",
+      "start": "August 2017",
+      "end": "December 2021",
+      "details": "3.87 GPA · Magna Cum Laude honors · Focus on mechanical design, solid mechanics, thermal fluid systems, and manufacturing processes."
     }
   ],
-  "certifications": [
-    "PLACEHOLDER — e.g. EIT / FE, Six Sigma, PLC certification"
+  "references": [
+    {
+      "name": "John Schar",
+      "title": "Maintenance Crew Leader",
+      "note": "Contact details available upon request"
+    },
+    {
+      "name": "Chris Roberts",
+      "title": "Welder / Fabricator",
+      "note": "Contact details available upon request"
+    },
+    {
+      "name": "Matt Erford",
+      "title": "Engineering Manager",
+      "note": "Contact details available upon request"
+    }
   ],
   "skills": {
-    "radar": [
-      { "label": "CAD / Design", "value": 90 },
-      { "label": "GD&T / Tolerancing", "value": 75 },
-      { "label": "FEA / Analysis", "value": 65 },
-      { "label": "Software Dev", "value": 80 },
-      { "label": "Automation / PLC", "value": 60 },
-      { "label": "Project Mgmt", "value": 70 }
-    ],
     "categories": [
       {
-        "name": "Mechanical",
+        "name": "Mechanical Engineering",
         "items": [
-          { "label": "SolidWorks / CAD", "level": 90 },
-          { "label": "GD&T", "level": 75 },
-          { "label": "FEA (static/thermal)", "level": 65 },
-          { "label": "DFM / DFA", "level": 70 }
+          { "label": "Machine Design", "level": 92 },
+          { "label": "CAD (SolidWorks/Creo/Autodesk)", "level": 90 },
+          { "label": "Technical Problem Solving", "level": 95 },
+          { "label": "GD&T & Tolerancing", "level": 88 },
+          { "label": "Failure Analysis & RCA", "level": 90 },
+          { "label": "Cost Reduction", "level": 92 },
+          { "label": "Project Management ($4.3M CapEx)", "level": 95 }
         ]
       },
       {
-        "name": "Software",
+        "name": "Systems & Critical Facilities",
         "items": [
-          { "label": "Python", "level": 80 },
-          { "label": "JavaScript", "level": 65 },
-          { "label": "SQL", "level": 60 },
-          { "label": "REST APIs / integrations", "level": 75 }
+          { "label": "24/7 Critical Plant Operations", "level": 95 },
+          { "label": "Heat Transfer & Cooling Systems", "level": 88 },
+          { "label": "Energy Optimization & Savings", "level": 87 },
+          { "label": "Safe System Design & Procedures", "level": 92 },
+          { "label": "Contractor & Crew Leadership", "level": 90 },
+          { "label": "Technical Documentation", "level": 88 }
         ]
       },
       {
-        "name": "Plant / Manufacturing",
+        "name": "Software Engineering & Tools",
         "items": [
-          { "label": "CMMS / Work Orders", "level": 85 },
-          { "label": "PLC / Controls basics", "level": 55 },
-          { "label": "Root cause analysis", "level": 75 }
+          { "label": "Web Applications & JavaScript", "level": 85 },
+          { "label": "Data Analysis & Python", "level": 86 },
+          { "label": "Automations & Scripting", "level": 88 },
+          { "label": "Deep Learning / AI", "level": 78 },
+          { "label": "SAP & ERP Workflows", "level": 85 },
+          { "label": "Google, Microsoft, Libre Suites", "level": 90 }
         ]
       }
     ]
   },
   "projects": [
     {
-      "id": "cmms-integration",
-      "title": "CMMS Work-Order Integration (placeholder)",
-      "category": "Software",
-      "tags": ["Python", "API", "Automation"],
-      "summary": "Built an integration layer against a plant CMMS to automate work-order creation and reporting.",
-      "description": "Placeholder description — replace with real scope. Example shape: reverse-engineered an internal API, built a client library, and automated a workflow that used to be manual data entry.",
+      "id": "capex-modernization",
+      "title": "$4.3M Capital Program & Facility Modernization",
+      "category": "Management",
+      "paths": ["management", "systems", "datacenter"],
+      "tags": ["CapEx", "Project Mgmt", "Process Equipment", "SAP"],
+      "summary": "Managed 24 capital projects totaling $4.3M for global manufacturing facilities, modernizing rubber mixing process equipment on schedule and within budget.",
+      "description": "Directed engineering services and capital projects at Bridgestone Americas Aiken Off Road Radial Tire plant. Orchestrated cross-functional teams, multi-trade contractors, and plant technicians through full project lifecycles: scope definition, budget estimation, equipment specification, vendor coordination, installation, safety validation, and commissioning.",
       "highlights": [
-        "Placeholder metric, e.g. saved N hours/week of manual entry",
-        "Placeholder: handled auth/session/token lifecycle",
-        "Placeholder: shipped with an offline mock server for safe testing"
+        "24 capital projects successfully executed with $4.3M total capital allocation",
+        "Zero schedule slip across concurrent multi-facility modernization projects",
+        "Managed on-site contractors, welders, fabricators, and maintenance crew leaders",
+        "Provided engineering consultation and equipment analysis to international manufacturing sites"
       ]
     },
     {
-      "id": "bracket-redesign",
-      "title": "Pillow-Block Bracket Redesign (placeholder)",
-      "category": "Mechanical Design",
-      "tags": ["SolidWorks", "FEA", "DFM"],
-      "summary": "Redesigned a recurring-failure mounting bracket to cut cost and eliminate a fatigue failure mode.",
-      "description": "Placeholder — the 3D viewer below shows a simplified parametric version of this kind of assembly (base plate, support walls, shaft, bolts). Swap in your real STL/STEP model when ready.",
+      "id": "nuclear-heat-transfer",
+      "title": "Nuclear Facility Heat Transfer & Energy Optimization",
+      "category": "Critical Facilities",
+      "paths": ["datacenter", "systems"],
+      "tags": ["Heat Transfer", "Thermodynamics", "Energy Savings", "SRNS"],
+      "summary": "Researched industrial heat transfer systems and energy recovery opportunities at Savannah River Nuclear Solutions to lower operational costs and improve thermal efficiency.",
+      "description": "Evaluated process heat transfer systems, thermodynamics, and energy utilization within high-stakes nuclear facilities. Modeled thermal efficiency gains, evaluated cooling fluid dynamics, and proposed continuous improvement initiatives that reduced maintenance downtime and operational energy consumption.",
       "highlights": [
-        "Placeholder: FEA showed PLACEHOLDER stress concentration at fillet",
-        "Placeholder: redesign reduced part cost by PLACEHOLDER%",
-        "Placeholder: zero failures in PLACEHOLDER months post-install"
+        "Identified heat transfer optimization and facility energy savings opportunities",
+        "Ensured rigorous safe system designs and regulatory operating procedures",
+        "Formulated continuous improvement projects to reduce long-term maintenance downtime",
+        "Collaborated across specialized multi-department engineering and operations teams"
       ]
     },
     {
-      "id": "line-tracker",
-      "title": "Production Line Downtime Tracker (placeholder)",
-      "category": "Software",
-      "tags": ["JavaScript", "Dashboard", "Data"],
-      "summary": "Lightweight dashboard for tracking line downtime causes and trends.",
-      "description": "Placeholder — describe the real tool: data source, who used it, what decision it changed.",
+      "id": "plant-reliability-24-7",
+      "title": "24/7 Plant Mechanical Systems Risk Prevention & Uptime",
+      "category": "Systems",
+      "paths": ["datacenter", "systems", "management"],
+      "tags": ["24/7 Operations", "Reliability", "Failure Analysis", "Safety"],
+      "summary": "Served as primary 24/7 technical authority for high-stakes rubber mixing mechanical systems, preventing unplanned downtime through proactive equipment evaluation.",
+      "description": "Provided around-the-clock engineering support and technical ownership for high-throughput heavy manufacturing equipment. Performed failure analysis, root cause investigations, and reliability engineering to eliminate chronic failure modes, protect personnel safety, and maintain high plant availability.",
       "highlights": [
-        "Placeholder: surfaced top-3 downtime causes for weekly review",
-        "Placeholder: adopted by PLACEHOLDER team"
+        "Primary 24/7 technical expert for heavy mechanical systems and emergency troubleshooting",
+        "Conducted root-cause failure analysis (RCA) and implemented permanent mechanical fixes",
+        "Developed predictive inspection procedures and updated technical engineering documentation",
+        "Collaborated closely with maintenance crew leaders and fabricators on rapid turnaround repairs"
       ]
     },
     {
-      "id": "beam-calc",
-      "title": "Interactive Beam Deflection Tool (this site)",
+      "id": "thermal-cooling-calc",
+      "title": "Critical Facility & Data Center Thermal Calculator (this site)",
       "category": "Analysis",
-      "tags": ["JavaScript", "Engineering Calc"],
-      "summary": "The live beam calculator on this page — built to show engineering math and code together.",
-      "description": "A real tool, not a placeholder: try the Beam Deflection Calculator section below. It computes deflection and bending stress for simply-supported or cantilever beams under point or distributed loads.",
+      "paths": ["datacenter", "systems"],
+      "tags": ["Thermodynamics", "Data Center", "CFM / HVAC", "Energy"],
+      "summary": "Interactive thermodynamics calculator estimating critical facility cooling airflow (CFM), heat rejection tonnage, and annual energy savings across varying PUE targets.",
+      "description": "An interactive engineering calculator built into this portfolio. Implements fundamental thermodynamics (Q = m * Cp * dT) to determine required cooling air delivery, sensible cooling tonnage, and energy savings for high-density IT and plant facilities.",
       "highlights": [
-        "Closed-form Euler-Bernoulli beam equations, not a canned library",
-        "Live-updating deflection curve as you change inputs"
+        "Live calculation of CFM airflow, total heat rejection, and refrigeration tonnage",
+        "Dynamic PUE sensitivity modeling with energy cost savings projection",
+        "Demonstrates mechanical thermal fluid principles applied to mission-critical infrastructure"
+      ]
+    },
+    {
+      "id": "cad-assembly-viewer",
+      "title": "Parametric CAD Assembly Viewer (this site)",
+      "category": "Mechanical Design",
+      "paths": ["systems", "all"],
+      "tags": ["Three.js", "CAD", "Machine Design", "GD&T"],
+      "summary": "Interactive 3D mechanical assembly viewer with real-time kinematic explode view, wireframe mode, and parametric component inspection.",
+      "description": "Showcases mechanical design principles directly in the browser using Three.js. Features a pillow-block bearing and bracket assembly with multi-part hierarchy (base plate, upright walls, bearing sleeve, precision shaft, fastener hardware) and dynamic orbit/explode controls.",
+      "highlights": [
+        "Hierarchical multi-part 3D CAD visualization in WebGL",
+        "Kinematic slider for explode-view assembly inspection",
+        "Demonstrates integration of mechanical engineering with interactive web technologies"
+      ]
+    },
+    {
+      "id": "beam-deflection-calc",
+      "title": "Euler-Bernoulli Beam Deflection Calculator (this site)",
+      "category": "Analysis",
+      "paths": ["systems", "all"],
+      "tags": ["JavaScript", "Solid Mechanics", "Euler-Bernoulli", "FEA"],
+      "summary": "Closed-form Euler-Bernoulli beam solver calculating maximum deflection, bending stress, and moment distributions under various support and loading conditions.",
+      "description": "Computes exact closed-form solutions for beam deflection under point and distributed loads for both simply-supported and cantilever configurations. Features real-time elastic curve rendering, section modulus calculation, and material modulus selection (Steel, Aluminum, Titanium, or Custom).",
+      "highlights": [
+        "Rigorous closed-form structural mechanics formulas without external blackbox libraries",
+        "Real-time canvas rendering of beam deformation curve and support reactions",
+        "Computes peak fiber bending stress and compares against material limits"
+      ]
+    },
+    {
+      "id": "software-automation",
+      "title": "Software Engineering, Automations & Web Tools",
+      "category": "Software",
+      "paths": ["management", "systems", "datacenter"],
+      "tags": ["Python", "Web Applications", "Data Analysis", "Automation"],
+      "summary": "Engineered modern software automations, web applications, and data analysis pipelines to streamline technical reporting and operational workflows.",
+      "description": "Combines mechanical engineering depth with full-stack programming capabilities. Developed custom automation scripts and web tools for engineering calculations, automated reporting, data visualization, and plant communication.",
+      "highlights": [
+        "Built responsive web applications and automated data collection pipelines",
+        "Bridged physical plant hardware and enterprise data systems",
+        "Applies modern deep learning and algorithmic automation to complex technical problems"
       ]
     }
   ]

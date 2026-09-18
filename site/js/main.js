@@ -1,7 +1,11 @@
-import { initProjectExplorer } from "./project-explorer.js";
+import { initProjectExplorer, updateProjectCareerPath } from "./project-explorer.js";
 import { initCadViewer } from "./cad-viewer.js";
 import { initBeamCalculator } from "./beam-calculator.js";
-import { initSkillsViz } from "./skills-viz.js";
+import { initThermalCalculator } from "./thermal-calculator.js";
+import { initSkillsViz, updateRadarChart, animateSkillBars } from "./skills-viz.js";
+
+let resumeData = null;
+let currentPath = "all";
 
 async function loadResume() {
   const res = await fetch("data/resume.json");
@@ -19,37 +23,126 @@ function el(tag, className, html) {
 function renderHero(data) {
   const { profile } = data;
   document.getElementById("hero-name").textContent = profile.name;
-  document.getElementById("hero-title").textContent = profile.title;
-  document.getElementById("hero-tagline").textContent = profile.tagline;
   document.getElementById("nav-brand").textContent = profile.name;
 
   const githubLink = document.getElementById("link-github");
-  githubLink.href = profile.links.github;
-  const linkedinLink = document.getElementById("link-linkedin");
-  linkedinLink.href = profile.links.linkedin;
+  if (githubLink && profile.links.github) githubLink.href = profile.links.github;
 
-  document.getElementById("footer-email").textContent = profile.email;
-  document.getElementById("footer-email").href = `mailto:${profile.email}`;
-  document.getElementById("footer-github").href = profile.links.github;
-  document.getElementById("footer-linkedin").href = profile.links.linkedin;
-  document.getElementById("footer-year").textContent = new Date().getFullYear();
+  const portfolioLink = document.getElementById("link-portfolio");
+  if (portfolioLink && profile.links.portfolio) portfolioLink.href = profile.links.portfolio;
+
+  const footerEmail = document.getElementById("footer-email");
+  if (footerEmail) {
+    footerEmail.textContent = profile.email;
+    footerEmail.href = `mailto:${profile.email}`;
+  }
+
+  const footerGithub = document.getElementById("footer-github");
+  if (footerGithub && profile.links.github) footerGithub.href = profile.links.github;
+
+  const footerPortfolio = document.getElementById("footer-portfolio");
+  if (footerPortfolio && profile.links.portfolio) footerPortfolio.href = profile.links.portfolio;
+
+  const footerYear = document.getElementById("footer-year");
+  if (footerYear) footerYear.textContent = new Date().getFullYear();
 }
 
-function renderSummary(data) {
-  document.getElementById("summary-text").textContent = data.summary;
+function applyCareerPath(pathKey) {
+  if (!resumeData || !resumeData.careerPaths) return;
+  const pathConfig = resumeData.careerPaths[pathKey] || resumeData.careerPaths.all;
+  currentPath = pathKey;
+
+  // Update hero texts
+  const heroBadge = document.getElementById("hero-badge");
+  const heroTitle = document.getElementById("hero-title");
+  const heroTagline = document.getElementById("hero-tagline");
+  const summaryText = document.getElementById("summary-text");
+
+  if (heroBadge) heroBadge.textContent = pathConfig.badge || pathConfig.name;
+  if (heroTitle) heroTitle.textContent = pathConfig.title;
+  if (heroTagline) heroTagline.textContent = pathConfig.tagline;
+  if (summaryText) summaryText.textContent = pathConfig.summary;
+
+  // Update switcher buttons UI
+  document.querySelectorAll(".path-btn").forEach((btn) => {
+    const isActive = btn.dataset.path === pathKey;
+    btn.classList.toggle("active", isActive);
+    btn.setAttribute("aria-selected", isActive ? "true" : "false");
+  });
+
+  // Update radar chart
+  if (pathConfig.radar) {
+    updateRadarChart(pathConfig.radar);
+  }
+
+  // Update experience bullets spotlight
+  updateExperienceHighlighting(pathKey);
+
+  // Update projects
+  updateProjectCareerPath(pathKey);
+}
+
+function updateExperienceHighlighting(pathKey) {
+  const allBullets = document.querySelectorAll(".bullet-item");
+  allBullets.forEach((li) => {
+    const paths = (li.dataset.paths || "").split(",");
+    if (pathKey === "all") {
+      li.classList.remove("path-spotlight", "path-muted");
+    } else if (paths.includes(pathKey)) {
+      li.classList.add("path-spotlight");
+      li.classList.remove("path-muted");
+    } else {
+      li.classList.remove("path-spotlight");
+      li.classList.add("path-muted");
+    }
+  });
 }
 
 function renderExperience(data) {
   const container = document.getElementById("experience-list");
+  if (!container) return;
   container.innerHTML = "";
+
   data.experience.forEach((job) => {
     const item = el("div", "timeline-item");
     item.appendChild(el("div", "when", `${job.start} – ${job.end}`));
+
     const body = el("div");
     body.appendChild(el("h3", null, job.role));
     body.appendChild(el("div", "org", `${job.company} · ${job.location}`));
+
+    if (job.overview) {
+      body.appendChild(el("div", "role-overview", job.overview));
+    }
+
     const ul = el("ul");
-    job.bullets.forEach((b) => ul.appendChild(el("li", null, b)));
+    job.bullets.forEach((b) => {
+      const text = typeof b === "string" ? b : b.text;
+      const paths = typeof b === "string" ? [] : b.paths || [];
+
+      const li = el("li", "bullet-item");
+      li.dataset.paths = paths.join(",");
+
+      // Add badge tag if tagged
+      if (paths.length) {
+        let tagLabel = "";
+        if (paths.includes("management")) tagLabel = "Management";
+        else if (paths.includes("datacenter")) tagLabel = "Data Center";
+        else if (paths.includes("systems")) tagLabel = "Systems";
+
+        if (tagLabel) {
+          const badge = el("span", "bullet-tag", tagLabel);
+          li.appendChild(badge);
+        }
+      }
+
+      const textNode = document.createElement("span");
+      textNode.textContent = text;
+      li.appendChild(textNode);
+
+      ul.appendChild(li);
+    });
+
     body.appendChild(ul);
     item.appendChild(body);
     container.appendChild(item);
@@ -58,50 +151,78 @@ function renderExperience(data) {
 
 function renderEducation(data) {
   const container = document.getElementById("education-list");
+  if (!container) return;
   container.innerHTML = "";
+
   data.education.forEach((edu) => {
     const item = el("div", "timeline-item");
     item.appendChild(el("div", "when", `${edu.start} – ${edu.end}`));
     const body = el("div");
     body.appendChild(el("h3", null, edu.degree));
     body.appendChild(el("div", "org", edu.school));
-    body.appendChild(el("p", null, edu.details));
+    if (edu.details) {
+      body.appendChild(el("p", null, edu.details));
+    }
     item.appendChild(body);
     container.appendChild(item);
   });
+}
 
-  if (data.certifications && data.certifications.length) {
-    const certList = document.getElementById("certifications-list");
-    certList.innerHTML = "";
-    data.certifications.forEach((c) => certList.appendChild(el("li", null, c)));
-  }
+function renderReferences(data) {
+  const container = document.getElementById("reference-list");
+  if (!container || !data.references) return;
+  container.innerHTML = "";
+
+  data.references.forEach((ref) => {
+    const card = el("div", "reference-card");
+    card.appendChild(el("h4", null, ref.name));
+    card.appendChild(el("div", "role", ref.title));
+    if (ref.note) {
+      card.appendChild(el("div", "note", ref.note));
+    }
+    container.appendChild(card);
+  });
+}
+
+function setupPathSwitcher() {
+  const switcher = document.getElementById("path-switcher");
+  if (!switcher) return;
+
+  switcher.addEventListener("click", (e) => {
+    const btn = e.target.closest(".path-btn");
+    if (!btn) return;
+    const pathKey = btn.dataset.path;
+    if (pathKey) {
+      applyCareerPath(pathKey);
+    }
+  });
 }
 
 async function main() {
-  let data;
   try {
-    data = await loadResume();
+    resumeData = await loadResume();
   } catch (err) {
     console.error(err);
     document.body.innerHTML =
-      '<p style="padding:40px;font-family:sans-serif;">Could not load resume data. If you are running this locally, serve the site over http:// (fetch of data/resume.json fails over file://) e.g. `npx serve site`.</p>';
+      '<p style="padding:40px;font-family:sans-serif;">Could not load resume data. Please serve over HTTP (e.g., `npm run serve`).</p>';
     return;
   }
 
-  renderHero(data);
-  renderSummary(data);
-  renderExperience(data);
-  renderEducation(data);
-  initSkillsViz(data.skills);
-  initProjectExplorer(data.projects);
+  renderHero(resumeData);
+  renderExperience(resumeData);
+  renderEducation(resumeData);
+  renderReferences(resumeData);
+
+  initSkillsViz(resumeData.skills);
+  initProjectExplorer(resumeData.projects);
   initCadViewer();
   initBeamCalculator();
+  initThermalCalculator();
 
-  document.querySelectorAll(".skill-bar-fill").forEach((bar) => {
-    requestAnimationFrame(() => {
-      bar.style.width = bar.dataset.level + "%";
-    });
-  });
+  setupPathSwitcher();
+  applyCareerPath("all");
+
+  animateSkillBars();
 }
 
 main();
