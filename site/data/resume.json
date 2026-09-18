@@ -15,7 +15,7 @@
     "all": {
       "name": "Comprehensive Overview",
       "shortName": "All",
-      "badge": "Full-Stack Mechanical & Systems Engineer",
+      "badge": "Mechanical & Systems Engineer",
       "title": "Senior Mechanical Engineer",
       "tagline": "Combines mechanical engineering principles with modern programming capabilities to drive operational excellence, cost reduction, and capital project delivery.",
       "summary": "Results-driven Senior Mechanical Engineer with experience in industrial manufacturing and nuclear facilities. Demonstrated expertise in project management, machine design, and automated solutions. Combines mechanical engineering principles with modern programming capabilities to drive operational excellence and cost reduction initiatives. Track record of successful project delivery in high-stakes manufacturing environments.",
@@ -63,7 +63,7 @@
     "datacenter": {
       "name": "Data Center Engineering",
       "shortName": "Data Center",
-      "badge": "Critical Facilities & Thermal Infrastructure Engineer",
+      "badge": "Critical Facilities & Thermal Infrastructure",
       "title": "Critical Facilities & Data Center Infrastructure Engineer",
       "tagline": "Specializing in 24/7 continuous operations, industrial heat transfer & thermal systems, energy efficiency, and mechanical plant reliability.",
       "summary": "Mechanical and systems engineer specialized in 24/7 mission-critical uptime, industrial heat transfer systems, and facility energy efficiency. Experience includes serving as 24/7 on-call technical expert for plant mechanical systems, thermodynamics and heat transfer research at Savannah River Nuclear Solutions, and predictive maintenance automation. Expert in high-reliability cooling, energy savings opportunities, and mechanical infrastructure resilience.",
@@ -153,23 +153,12 @@
       "details": "3.87 GPA · Magna Cum Laude honors · Focus on mechanical design, solid mechanics, thermal fluid systems, and manufacturing processes."
     }
   ],
-  "references": [
-    {
-      "name": "John Schar",
-      "title": "Maintenance Crew Leader",
-      "note": "Contact details available upon request"
-    },
-    {
-      "name": "Chris Roberts",
-      "title": "Welder / Fabricator",
-      "note": "Contact details available upon request"
-    },
-    {
-      "name": "Matt Erford",
-      "title": "Engineering Manager",
-      "note": "Contact details available upon request"
-    }
-  ],
+  "references": {
+    "statement": "Professional references from engineering managers, maintenance crew leaders, and manufacturing leadership are available upon request.",
+    "email": "j03randall@gmail.com",
+    "subject": "Professional Reference Request — Jonathan Randall",
+    "body": "Hi Jonathan,\n\nI reviewed your engineering background and portfolio and would like to request contact details for your professional references.\n\nCompany: \nPosition / Scope: \n\nBest regards,"
+  },
   "skills": {
     "categories": [
       {
@@ -256,12 +245,13 @@
     },
     {
       "id": "thermal-cooling-calc",
-      "title": "Critical Facility & Data Center Thermal Calculator (this site)",
-      "category": "Analysis",
+      "title": "Data Center & Critical Cooling Thermal Calculator",
+      "category": "Interactive Tools",
       "paths": ["datacenter", "systems"],
       "tags": ["Thermodynamics", "Data Center", "CFM / HVAC", "Energy"],
+      "toolUrl": "tools.html#thermal",
       "summary": "Interactive thermodynamics calculator estimating critical facility cooling airflow (CFM), heat rejection tonnage, and annual energy savings across varying PUE targets.",
-      "description": "An interactive engineering calculator built into this portfolio. Implements fundamental thermodynamics (Q = m * Cp * dT) to determine required cooling air delivery, sensible cooling tonnage, and energy savings for high-density IT and plant facilities.",
+      "description": "An interactive engineering calculation tool implementing fundamental thermodynamics (Q = m * Cp * dT) to determine required cooling air delivery, sensible cooling tonnage, and energy savings for high-density IT and plant facilities.",
       "highlights": [
         "Live calculation of CFM airflow, total heat rejection, and refrigeration tonnage",
         "Dynamic PUE sensitivity modeling with energy cost savings projection",
@@ -270,12 +260,13 @@
     },
     {
       "id": "cad-assembly-viewer",
-      "title": "Parametric CAD Assembly Viewer (this site)",
-      "category": "Mechanical Design",
+      "title": "Parametric CAD Assembly Viewer (3D WebGL)",
+      "category": "Interactive Tools",
       "paths": ["systems", "all"],
       "tags": ["Three.js", "CAD", "Machine Design", "GD&T"],
+      "toolUrl": "tools.html#cad",
       "summary": "Interactive 3D mechanical assembly viewer with real-time kinematic explode view, wireframe mode, and parametric component inspection.",
-      "description": "Showcases mechanical design principles directly in the browser using Three.js. Features a pillow-block bearing and bracket assembly with multi-part hierarchy (base plate, upright walls, bearing sleeve, precision shaft, fastener hardware) and dynamic orbit/explode controls.",
+      "description": "Showcases mechanical design principles directly in WebGL using Three.js. Features a pillow-block bearing and bracket assembly with multi-part hierarchy (base plate, upright walls, bearing sleeve, precision shaft, fastener hardware) and dynamic orbit/explode controls.",
       "highlights": [
         "Hierarchical multi-part 3D CAD visualization in WebGL",
         "Kinematic slider for explode-view assembly inspection",
@@ -284,12 +275,13 @@
     },
     {
       "id": "beam-deflection-calc",
-      "title": "Euler-Bernoulli Beam Deflection Calculator (this site)",
-      "category": "Analysis",
+      "title": "Euler-Bernoulli Beam Deflection Calculator",
+      "category": "Interactive Tools",
       "paths": ["systems", "all"],
       "tags": ["JavaScript", "Solid Mechanics", "Euler-Bernoulli", "FEA"],
+      "toolUrl": "tools.html#calculator",
       "summary": "Closed-form Euler-Bernoulli beam solver calculating maximum deflection, bending stress, and moment distributions under various support and loading conditions.",
-      "description": "Computes exact closed-form solutions for beam deflection under point and distributed loads for both simply-supported and cantilever configurations. Features real-time elastic curve rendering, section modulus calculation, and material modulus selection (Steel, Aluminum, Titanium, or Custom).",
+      "description": "Computes exact closed-form solutions for beam deflection under point and distributed loads for both simply-supported and cantilever configurations. Features real-time elastic curve rendering, section modulus calculation, and material modulus selection.",
       "highlights": [
         "Rigorous closed-form structural mechanics formulas without external blackbox libraries",
         "Real-time canvas rendering of beam deformation curve and support reactions",

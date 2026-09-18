@@ -97,7 +97,7 @@ function drawThermalCanvas(canvas, { deltaTF, itLoadKw, cfm }) {
   ctx.textAlign = "center";
   ctx.fillText("CRITICAL IT RACKS", rackX + rackWidth / 2, 38);
 
-  ctx.fillStyle = "#4fd1c5";
+  ctx.fillStyle = isDark ? "#a855f7" : "#7c3aed";
   ctx.font = "bold 14px sans-serif";
   ctx.fillText(`${itLoadKw} kW Load`, rackX + rackWidth / 2, 62);
 

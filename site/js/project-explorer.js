@@ -1,5 +1,5 @@
 // Filterable project grid + detail modal. Pure DOM, no dependencies.
-// Enhanced with career-path tagging and filtering.
+// Enhanced with career-path tagging and filtering, and interactive tool launching.
 
 let allProjects = [];
 let activeCategory = "All";
@@ -49,13 +49,13 @@ function renderGrid(projects) {
       const pathBadge = document.createElement("span");
       pathBadge.className = "project-path-badge";
       if (p.paths.includes("management") && activeCareerPath === "management") {
-        pathBadge.textContent = "★ Management Match";
+        pathBadge.textContent = "Management Match";
       } else if (p.paths.includes("systems") && activeCareerPath === "systems") {
-        pathBadge.textContent = "★ Systems Match";
+        pathBadge.textContent = "Systems Match";
       } else if (p.paths.includes("datacenter") && activeCareerPath === "datacenter") {
-        pathBadge.textContent = "★ Data Center Match";
+        pathBadge.textContent = "Data Center Match";
       } else if (activeCareerPath !== "all") {
-        pathBadge.textContent = "Secondary Match";
+        pathBadge.textContent = "Cross-Discipline";
         pathBadge.classList.add("secondary");
       }
       if (pathBadge.textContent) {
@@ -97,6 +97,17 @@ function openModal(project) {
   const backdrop = document.getElementById("project-modal-backdrop");
   document.getElementById("modal-title").textContent = project.title;
   document.getElementById("modal-description").textContent = project.description;
+
+  const toolWrap = document.getElementById("modal-tool-link-wrap");
+  const toolLink = document.getElementById("modal-tool-link");
+  if (toolWrap && toolLink) {
+    if (project.toolUrl) {
+      toolLink.href = project.toolUrl;
+      toolWrap.style.display = "block";
+    } else {
+      toolWrap.style.display = "none";
+    }
+  }
 
   const highlightsList = document.getElementById("modal-highlights");
   highlightsList.innerHTML = "";

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Interactive Engineering Tools — Jonathan Randall</title>
+<meta name="description" content="Interactive mechanical, thermal, and structural engineering tools built with Three.js WebGL, closed-form Euler-Bernoulli equations, and thermodynamics." />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="site-header slim-header">
+  <nav class="site-nav">
+    <div class="brand">
+      <a href="index.html" class="nav-back">&larr; Back to Resume</a>
+    </div>
+    <div class="links">
+      <a href="#cad">3D CAD Viewer</a>
+      <a href="#thermal">Thermal / Cooling</a>
+      <a href="#calculator">Beam Deflection</a>
+    </div>
+    <a class="btn btn-small btn-ghost" href="index.html">Jonathan Randall</a>
+  </nav>
+</header>
+
+<main class="container tools-container">
+
+  <div class="tools-intro">
+    <div class="eyebrow">Technical Portfolio</div>
+    <h1>Interactive Engineering Tools</h1>
+    <p>Live, browser-based engineering models demonstrating mechanical design, thermodynamics, and solid mechanics without external black-box libraries.</p>
+
+    <!-- Tool Selector Pills -->
+    <div class="tool-tabs-bar">
+      <button class="tool-tab-btn active" data-target="cad">3D CAD Viewer</button>
+      <button class="tool-tab-btn" data-target="thermal">Data Center Thermal Calc</button>
+      <button class="tool-tab-btn" data-target="calculator">Beam Deflection Calc</button>
+    </div>
+  </div>
+
+  <!-- 3D CAD Viewer -->
+  <section id="cad" class="tool-section">
+    <div class="section-head">
+      <div class="eyebrow">Machine Design & 3D WebGL</div>
+      <h2>Parametric CAD Assembly Viewer</h2>
+      <p>Interactive Three.js assembly featuring a multi-part pillow-block bearing and mounting bracket. Rotate, zoom, and inspect mechanical clearances with real-time kinematic explode view.</p>
+    </div>
+    <div class="cad-wrap">
+      <div id="cad-canvas-holder">
+        <span class="cad-hint">drag to orbit &middot; scroll to zoom</span>
+      </div>
+      <div class="cad-controls card">
+        <div>
+          <label for="cad-explode">Kinematic Explode View</label>
+          <input type="range" id="cad-explode" min="0" max="1" step="0.01" value="0" />
+        </div>
+        <div>
+          <label><input type="checkbox" id="cad-wireframe" /> Wireframe Mode</label>
+        </div>
+        <div>
+          <label><input type="checkbox" id="cad-autorotate" /> Continuous Rotation</label>
+        </div>
+        <button class="btn btn-ghost btn-small" id="cad-reset">Reset Camera</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Critical Facilities & Data Center Thermal Calculator -->
+  <section id="thermal" class="tool-section tool-hidden">
+    <div class="section-head">
+      <div class="eyebrow">Thermodynamics & Critical Facilities</div>
+      <h2>Data Center & Critical Cooling Thermal Calculator</h2>
+      <p>Calculates required cooling air volume (CFM), sensible heat dissipation, and facility PUE energy savings using first-principles thermodynamics: Q = m &middot; Cp &middot; &Delta;T.</p>
+    </div>
+    <div class="calc-wrap">
+      <form class="calc-form card" id="thermal-form">
+        <div class="field">
+          <label for="thermal-it-load">Critical IT / Equipment Load (kW)</label>
+          <input type="number" id="thermal-it-load" value="500" min="10" max="50000" step="50" />
+        </div>
+        <div class="field">
+          <label for="thermal-delta-t">Temperature Rise &Delta;T (&deg;F)</label>
+          <input type="number" id="thermal-delta-t" value="20" min="5" max="50" step="1" />
+        </div>
+        <div class="field">
+          <label for="thermal-pue">Facility Target PUE</label>
+          <input type="number" id="thermal-pue" value="1.25" min="1.05" max="2.0" step="0.01" />
+        </div>
+        <div class="field">
+          <label for="thermal-rate">Electricity Cost ($/kWh)</label>
+          <input type="number" id="thermal-rate" value="0.08" min="0.01" max="0.50" step="0.01" />
+        </div>
+      </form>
+      <div>
+        <div class="calc-results">
+          <div class="calc-result-tile">
+            <div class="num" id="thermal-cfm-result">–</div>
+            <div class="lbl">Required Airflow</div>
+          </div>
+          <div class="calc-result-tile">
+            <div class="num" id="thermal-tonnage-result">–</div>
+            <div class="lbl">Cooling Tonnage</div>
+          </div>
+          <div class="calc-result-tile">
+            <div class="num" id="thermal-total-power-result">–</div>
+            <div class="lbl">Total Facility Power</div>
+          </div>
+          <div class="calc-result-tile">
+            <div class="num" id="thermal-savings-result">–</div>
+            <div class="lbl">Annual PUE Savings</div>
+          </div>
+        </div>
+        <canvas id="thermal-canvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Euler-Bernoulli Beam Calculator -->
+  <section id="calculator" class="tool-section tool-hidden">
+    <div class="section-head">
+      <div class="eyebrow">Structural Mechanics</div>
+      <h2>Euler-Bernoulli Beam Deflection Calculator</h2>
+      <p>Closed-form differential equation solver for rectangular cross-section beams under concentrated or distributed loading. Real-time elastic deflection curve rendering.</p>
+    </div>
+    <div class="calc-wrap">
+      <form class="calc-form card" id="beam-form">
+        <div class="field">
+          <label for="beam-type">Boundary Support</label>
+          <select id="beam-type">
+            <option value="simple">Simply Supported (Pin-Roller)</option>
+            <option value="cantilever">Cantilever (Fixed-Free)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="beam-load-type">Load Distribution</label>
+          <select id="beam-load-type">
+            <option value="point">Point Load (Midspan / Free End)</option>
+            <option value="distributed">Uniform Distributed Load</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="beam-length">Span Length L (m)</label>
+          <input type="number" id="beam-length" value="1.5" min="0.1" step="0.1" />
+        </div>
+        <div class="field">
+          <label id="beam-load-label" for="beam-load">Applied Load P (N)</label>
+          <input type="number" id="beam-load" value="500" step="10" />
+        </div>
+        <div class="field">
+          <label for="beam-material">Material Modulus E</label>
+          <select id="beam-material">
+            <option value="steel">Structural Steel (E = 200 GPa)</option>
+            <option value="aluminum">Aluminum 6061-T6 (E = 69 GPa)</option>
+            <option value="titanium">Titanium Ti-6Al-4V (E = 114 GPa)</option>
+            <option value="custom">Custom Modulus</option>
+          </select>
+        </div>
+        <div class="field" id="beam-custom-e-wrap" style="display:none;">
+          <label for="beam-custom-e">Custom Modulus E (GPa)</label>
+          <input type="number" id="beam-custom-e" value="200" step="1" />
+        </div>
+        <div class="field">
+          <label for="beam-width">Cross-Section Width b (mm)</label>
+          <input type="number" id="beam-width" value="20" min="1" step="1" />
+        </div>
+        <div class="field">
+          <label for="beam-height">Cross-Section Height h (mm)</label>
+          <input type="number" id="beam-height" value="30" min="1" step="1" />
+        </div>
+      </form>
+      <div>
+        <div class="calc-results">
+          <div class="calc-result-tile">
+            <div class="num" id="beam-deflection-result">–</div>
+            <div class="lbl">Max Elastic Deflection</div>
+          </div>
+          <div class="calc-result-tile">
+            <div class="num" id="beam-stress-result">–</div>
+            <div class="lbl">Peak Bending Stress</div>
+          </div>
+          <div class="calc-result-tile">
+            <div class="num" id="beam-moment-result">–</div>
+            <div class="lbl">Maximum Moment</div>
+          </div>
+        </div>
+        <canvas id="beam-canvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div style="font-weight: 600; margin-bottom: 4px;">Jonathan Randall &middot; Senior Mechanical & Systems Engineer</div>
+    <div>Augusta, GA &middot; 1.864.323.7353 &middot; <a href="mailto:j03randall@gmail.com">j03randall@gmail.com</a></div>
+    <div class="footer-links">
+      <a href="index.html">&larr; Return to Resume</a>
+      <a href="https://github.com/Flexingg" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://resume.randall.engineering/jonathanrandall/mechanical" target="_blank" rel="noopener">Portfolio</a>
+      <a href="assets/resume.pdf" download="Jonathan_Randall_Resume.pdf">Download PDF</a>
+    </div>
+    <div style="margin-top:16px; font-size:0.8rem; color:var(--text-dim);">&copy; <span id="footer-year"></span> Jonathan Randall</div>
+  </div>
+</footer>
+
+<script type="module" src="js/tools-page.js"></script>
+</body>
+</html>

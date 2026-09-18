@@ -8,14 +8,6 @@
 <link rel="stylesheet" href="css/main.css" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
-  }
-}
-</script>
 </head>
 <body>
 
@@ -26,13 +18,11 @@
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#thermal">Cooling Calc</a>
-      <a href="#calculator">Beam Calc</a>
-      <a href="#cad">CAD Viewer</a>
+      <a href="tools.html" class="nav-tools-link">Interactive Tools &nearr;</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
-    <a class="btn btn-small" href="assets/resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+    <a class="btn btn-small btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener">PDF Resume</a>
   </nav>
 </header>
 
@@ -40,49 +30,50 @@
 
   <!-- Career Path Switcher Bar -->
   <div class="path-switcher-wrap">
-    <div class="path-switcher-title">Select Career Path Focus:</div>
+    <div class="path-switcher-title">Career Path Focus</div>
     <div class="path-switcher-bar" id="path-switcher" role="tablist" aria-label="Career path switcher">
       <button class="path-btn active" data-path="all" role="tab" aria-selected="true">
-        <span>🌐</span> All / Core Overview
+        Overview
       </button>
       <button class="path-btn" data-path="management" role="tab" aria-selected="false">
-        <span>📊</span> Engineering Management ($4.3M CapEx)
+        Management &middot; $4.3M CapEx
       </button>
       <button class="path-btn" data-path="systems" role="tab" aria-selected="false">
-        <span>⚙️</span> Systems Engineering
+        Systems Engineering
       </button>
       <button class="path-btn" data-path="datacenter" role="tab" aria-selected="false">
-        <span>🏢</span> Data Center & Facilities
+        Data Center & Critical Facilities
       </button>
     </div>
   </div>
 
   <!-- Hero Section -->
   <section class="hero" id="top">
-    <div class="path-hero-badge" id="hero-badge">Full-Stack Mechanical & Systems Engineer</div>
+    <div class="path-hero-badge" id="hero-badge">Mechanical & Systems Engineer</div>
     <h1 id="hero-name">Jonathan Randall</h1>
     <div class="title" id="hero-title">Senior Mechanical Engineer</div>
     <p class="tagline" id="hero-tagline">Combines mechanical engineering principles with modern programming capabilities to drive operational excellence, cost reduction, and capital project delivery.</p>
     <div class="actions">
       <a class="btn" id="download-pdf" href="assets/resume.pdf" download="Jonathan_Randall_Resume.pdf">Download PDF Resume</a>
+      <a class="btn btn-ghost" href="tools.html">Interactive Engineering Tools &rarr;</a>
       <a class="btn btn-ghost" id="link-github" href="https://github.com/Flexingg" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn btn-ghost" id="link-portfolio" href="https://resume.randall.engineering/jonathanrandall/mechanical" target="_blank" rel="noopener">Engineering Portfolio</a>
-      <a class="btn btn-ghost" href="resume-print.html" target="_blank" rel="noopener">Print Version</a>
+      <a class="btn btn-ghost" id="link-portfolio" href="https://resume.randall.engineering/jonathanrandall/mechanical" target="_blank" rel="noopener">Portfolio</a>
+      <a class="btn btn-ghost" href="resume-print.html" target="_blank" rel="noopener">Print View</a>
     </div>
 
     <!-- KPI Metric Cards -->
     <div class="kpi-grid">
       <div class="kpi-card">
-        <div class="kpi-num">24</div>
-        <div class="kpi-lbl">Capital Projects ($4.3M)</div>
+        <div class="kpi-num">24 Projects</div>
+        <div class="kpi-lbl">$4.3M Capital Execution</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-num">24 / 7</div>
-        <div class="kpi-lbl">On-Call Mechanical Authority</div>
+        <div class="kpi-lbl">Mechanical Plant Authority</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num">Nuclear & Plant</div>
-        <div class="kpi-lbl">SRNS & Bridgestone Facilities</div>
+        <div class="kpi-num">SRNS & Plant</div>
+        <div class="kpi-lbl">Nuclear & Industrial Facilities</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-num">3.87 GPA</div>
@@ -94,18 +85,18 @@
   <!-- Summary / About -->
   <section id="about">
     <div class="section-head">
-      <div class="eyebrow">Professional Summary</div>
-      <h2>Executive Profile</h2>
+      <div class="eyebrow">Profile</div>
+      <h2>Executive Summary</h2>
     </div>
-    <p id="summary-text" class="card" style="font-size: 1.02rem; line-height: 1.7;"></p>
+    <p id="summary-text" class="card" style="font-size: 0.98rem; line-height: 1.7; margin: 0;"></p>
   </section>
 
   <!-- Experience -->
   <section id="experience">
     <div class="section-head">
-      <div class="eyebrow">Career History</div>
+      <div class="eyebrow">Work History</div>
       <h2>Engineering Experience</h2>
-      <p>Highlighted bullets automatically spotlight achievements matching your selected career path.</p>
+      <p>Highlighted items spotlight accomplishments aligned with your active career path focus.</p>
     </div>
     <div class="timeline" id="experience-list"></div>
   </section>
@@ -113,13 +104,13 @@
   <!-- Skills -->
   <section id="skills">
     <div class="section-head">
-      <div class="eyebrow">Core Capabilities</div>
-      <h2>Skills & Competencies</h2>
-      <p>Dynamic radar visualization updates based on active career track focus.</p>
+      <div class="eyebrow">Technical Competencies</div>
+      <h2>Skills & Proficiencies</h2>
+      <p>Competency radar re-weights dynamically based on the selected career path.</p>
     </div>
     <div class="skills-grid">
       <div class="card">
-        <h4 style="margin: 0 0 14px; font-size: 0.95rem;">Competency Focus</h4>
+        <h4 style="margin: 0 0 14px; font-size: 0.9rem; font-weight: 600;">Discipline Radar</h4>
         <canvas id="skills-radar" height="260"></canvas>
       </div>
       <div id="skills-categories"></div>
@@ -129,176 +120,41 @@
   <!-- Projects -->
   <section id="projects">
     <div class="section-head">
-      <div class="eyebrow">Project Portfolio</div>
-      <h2>Engineering Programs & Interactive Tools</h2>
-      <p>Filter by discipline or track. Click any project card for complete scope and highlights.</p>
+      <div class="eyebrow">Portfolio</div>
+      <h2>Engineering Projects & Programs</h2>
+      <p>Filter by discipline or track. Click any project card for complete scope and technical specifications.</p>
     </div>
     <div class="filter-bar" id="project-filters"></div>
     <div class="project-grid" id="project-grid"></div>
-  </section>
 
-  <!-- Critical Facilities & Data Center Thermal Calculator -->
-  <section id="thermal">
-    <div class="section-head">
-      <div class="eyebrow">Interactive Systems Tool</div>
-      <h2>Data Center & Critical Facilities Thermal Calculator</h2>
-      <p>First-principles thermodynamics (Q = m &middot; Cp &middot; &Delta;T) modeling cooling airflow requirements (CFM), heat rejection, and PUE energy savings.</p>
-    </div>
-    <div class="calc-wrap">
-      <form class="calc-form card" id="thermal-form">
-        <div class="field">
-          <label for="thermal-it-load">Critical IT / Equipment Load (kW)</label>
-          <input type="number" id="thermal-it-load" value="500" min="10" max="50000" step="50" />
-        </div>
-        <div class="field">
-          <label for="thermal-delta-t">Temperature Rise &Delta;T (&deg;F)</label>
-          <input type="number" id="thermal-delta-t" value="20" min="5" max="50" step="1" />
-        </div>
-        <div class="field">
-          <label for="thermal-pue">Facility Target PUE</label>
-          <input type="number" id="thermal-pue" value="1.25" min="1.05" max="2.0" step="0.01" />
-        </div>
-        <div class="field">
-          <label for="thermal-rate">Electricity Rate ($/kWh)</label>
-          <input type="number" id="thermal-rate" value="0.08" min="0.01" max="0.50" step="0.01" />
-        </div>
-      </form>
+    <!-- Interactive Tools Banner -->
+    <div class="tools-banner">
       <div>
-        <div class="calc-results">
-          <div class="calc-result-tile">
-            <div class="num" id="thermal-cfm-result">–</div>
-            <div class="lbl">Required Airflow</div>
-          </div>
-          <div class="calc-result-tile">
-            <div class="num" id="thermal-tonnage-result">–</div>
-            <div class="lbl">Cooling Capacity</div>
-          </div>
-          <div class="calc-result-tile">
-            <div class="num" id="thermal-total-power-result">–</div>
-            <div class="lbl">Total Facility Power</div>
-          </div>
-          <div class="calc-result-tile">
-            <div class="num" id="thermal-savings-result">–</div>
-            <div class="lbl">Annual PUE Savings</div>
-          </div>
-        </div>
-        <canvas id="thermal-canvas"></canvas>
+        <h3>Looking for the Interactive Engineering Tools?</h3>
+        <p>Explore the 3D CAD WebGL viewer, Data Center Thermal Cooling calculator, and Euler-Bernoulli Beam Deflection solver on the dedicated tools page.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Euler-Bernoulli Beam Calculator -->
-  <section id="calculator">
-    <div class="section-head">
-      <div class="eyebrow">Interactive Structural Tool</div>
-      <h2>Euler-Bernoulli Beam Deflection Calculator</h2>
-      <p>Closed-form mechanics solution for rectangular-section beams with real-time deflection curve rendering.</p>
-    </div>
-    <div class="calc-wrap">
-      <form class="calc-form card" id="beam-form">
-        <div class="field">
-          <label for="beam-type">Beam type</label>
-          <select id="beam-type">
-            <option value="simple">Simply supported</option>
-            <option value="cantilever">Cantilever</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="beam-load-type">Load type</label>
-          <select id="beam-load-type">
-            <option value="point">Point load</option>
-            <option value="distributed">Uniformly distributed</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="beam-length">Length L (m)</label>
-          <input type="number" id="beam-length" value="1.5" min="0.1" step="0.1" />
-        </div>
-        <div class="field">
-          <label id="beam-load-label" for="beam-load">Point load P (N)</label>
-          <input type="number" id="beam-load" value="500" step="10" />
-        </div>
-        <div class="field">
-          <label for="beam-material">Material</label>
-          <select id="beam-material">
-            <option value="steel">Steel (E = 200 GPa)</option>
-            <option value="aluminum">Aluminum (E = 69 GPa)</option>
-            <option value="titanium">Titanium (E = 114 GPa)</option>
-            <option value="custom">Custom</option>
-          </select>
-        </div>
-        <div class="field" id="beam-custom-e-wrap" style="display:none;">
-          <label for="beam-custom-e">Custom E (GPa)</label>
-          <input type="number" id="beam-custom-e" value="200" step="1" />
-        </div>
-        <div class="field">
-          <label for="beam-width">Section width b (mm)</label>
-          <input type="number" id="beam-width" value="20" min="1" step="1" />
-        </div>
-        <div class="field">
-          <label for="beam-height">Section height h (mm)</label>
-          <input type="number" id="beam-height" value="30" min="1" step="1" />
-        </div>
-      </form>
-      <div>
-        <div class="calc-results">
-          <div class="calc-result-tile">
-            <div class="num" id="beam-deflection-result">–</div>
-            <div class="lbl">Max deflection</div>
-          </div>
-          <div class="calc-result-tile">
-            <div class="num" id="beam-stress-result">–</div>
-            <div class="lbl">Max bending stress</div>
-          </div>
-          <div class="calc-result-tile">
-            <div class="num" id="beam-moment-result">–</div>
-            <div class="lbl">Max moment</div>
-          </div>
-        </div>
-        <canvas id="beam-canvas"></canvas>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3D CAD Viewer -->
-  <section id="cad">
-    <div class="section-head">
-      <div class="eyebrow">Interactive CAD Tool</div>
-      <h2>Parametric CAD Assembly Viewer</h2>
-      <p>Browser-based Three.js mechanical assembly (pillow-block bearing, base plate, shaft, fasteners). Drag to orbit, scroll to zoom, or adjust kinematic explode view.</p>
-    </div>
-    <div class="cad-wrap">
-      <div id="cad-canvas-holder">
-        <span class="cad-hint">drag to orbit &middot; scroll to zoom</span>
-      </div>
-      <div class="cad-controls card">
-        <div>
-          <label for="cad-explode">Explode view</label>
-          <input type="range" id="cad-explode" min="0" max="1" step="0.01" value="0" />
-        </div>
-        <div>
-          <label><input type="checkbox" id="cad-wireframe" /> Wireframe</label>
-        </div>
-        <div>
-          <label><input type="checkbox" id="cad-autorotate" /> Auto-rotate</label>
-        </div>
-        <button class="btn btn-ghost btn-small" id="cad-reset">Reset view</button>
-      </div>
+      <a class="btn" href="tools.html">Open Interactive Tools &rarr;</a>
     </div>
   </section>
 
   <!-- Education & References -->
   <section id="education">
     <div class="section-head">
-      <div class="eyebrow">Credentials & Network</div>
+      <div class="eyebrow">Credentials</div>
       <h2>Education & Professional References</h2>
     </div>
     <div class="timeline" id="education-list"></div>
 
-    <div style="margin-top: 36px;">
-      <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Professional References</h3>
-      <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:14px;">Verified references from industrial manufacturing and maintenance leadership.</p>
-      <div class="reference-grid" id="reference-list"></div>
+    <!-- References Request Box -->
+    <div style="margin-top: 32px;">
+      <h3 style="font-size: 1.05rem; margin-bottom: 6px; font-weight: 600;">Professional References</h3>
+      <div class="reference-box" id="reference-box">
+        <div class="info-text">
+          <div>Professional references from engineering managers, maintenance crew leaders, and manufacturing leadership are available upon request.</div>
+          <div class="sub-note">Direct contacts are kept private on public web crawlers. Click below to request verified contact details.</div>
+        </div>
+        <a class="btn btn-ghost" id="btn-request-ref" href="#">Request References &rarr;</a>
+      </div>
     </div>
   </section>
 
@@ -307,15 +163,16 @@
 <!-- Footer -->
 <footer id="contact">
   <div class="container">
-    <div style="font-size: 1.05rem; font-weight: 600; margin-bottom: 6px;">Jonathan Randall</div>
+    <div style="font-weight: 600; margin-bottom: 4px; color: var(--text);">Jonathan Randall &middot; Senior Mechanical Engineer</div>
     <div>Augusta, GA &middot; 1.864.323.7353 &middot; <a id="footer-email" href="mailto:j03randall@gmail.com">j03randall@gmail.com</a></div>
     <div class="footer-links">
       <a id="footer-github" href="https://github.com/Flexingg" target="_blank" rel="noopener">GitHub</a>
       <a id="footer-portfolio" href="https://resume.randall.engineering/jonathanrandall/mechanical" target="_blank" rel="noopener">Portfolio</a>
+      <a href="tools.html">Interactive Tools</a>
       <a href="resume-print.html" target="_blank" rel="noopener">Printable Resume</a>
       <a href="assets/resume.pdf" download="Jonathan_Randall_Resume.pdf">Download PDF</a>
     </div>
-    <div style="margin-top:16px; font-size:0.8rem; color:var(--text-dim);">&copy; <span id="footer-year"></span> Jonathan Randall. Built with plain HTML/CSS/JS and deployed via GitHub Actions.</div>
+    <div style="margin-top:16px; font-size:0.78rem; color:var(--text-dim);">&copy; <span id="footer-year"></span> Jonathan Randall &middot; Deployed via GitHub Pages</div>
   </div>
 </footer>
 
@@ -326,7 +183,10 @@
     <h3 id="modal-title"></h3>
     <div class="tag-row" id="modal-tags" style="margin-bottom:14px;"></div>
     <p id="modal-description"></p>
-    <h4 style="font-size: 0.95rem; margin-top: 18px; margin-bottom: 8px;">Key Accomplishments & Scope:</h4>
+    <div id="modal-tool-link-wrap" style="margin: 14px 0 10px; display:none;">
+      <a class="btn btn-small" id="modal-tool-link" href="#">Launch Interactive Tool &rarr;</a>
+    </div>
+    <h4 style="font-size: 0.9rem; margin-top: 16px; margin-bottom: 8px; font-weight: 600;">Key Scope & Outcomes:</h4>
     <ul id="modal-highlights"></ul>
   </div>
 </div>

@@ -1,7 +1,4 @@
 import { initProjectExplorer, updateProjectCareerPath } from "./project-explorer.js";
-import { initCadViewer } from "./cad-viewer.js";
-import { initBeamCalculator } from "./beam-calculator.js";
-import { initThermalCalculator } from "./thermal-calculator.js";
 import { initSkillsViz, updateRadarChart, animateSkillBars } from "./skills-viz.js";
 
 let resumeData = null;
@@ -168,20 +165,17 @@ function renderEducation(data) {
   });
 }
 
-function renderReferences(data) {
-  const container = document.getElementById("reference-list");
-  if (!container || !data.references) return;
-  container.innerHTML = "";
+function setupReferences(data) {
+  const btn = document.getElementById("btn-request-ref");
+  if (!btn) return;
 
-  data.references.forEach((ref) => {
-    const card = el("div", "reference-card");
-    card.appendChild(el("h4", null, ref.name));
-    card.appendChild(el("div", "role", ref.title));
-    if (ref.note) {
-      card.appendChild(el("div", "note", ref.note));
-    }
-    container.appendChild(card);
-  });
+  const email = (data.references && data.references.email) || data.profile.email;
+  const subject = (data.references && data.references.subject) || "Reference Request — Jonathan Randall";
+  const body =
+    (data.references && data.references.body) ||
+    "Hi Jonathan,\n\nI reviewed your engineering background and would like to request contact details for your professional references.\n\nCompany: \nRole: \n\nThank you,";
+
+  btn.href = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 function setupPathSwitcher() {
@@ -211,13 +205,10 @@ async function main() {
   renderHero(resumeData);
   renderExperience(resumeData);
   renderEducation(resumeData);
-  renderReferences(resumeData);
+  setupReferences(resumeData);
 
   initSkillsViz(resumeData.skills);
   initProjectExplorer(resumeData.projects);
-  initCadViewer();
-  initBeamCalculator();
-  initThermalCalculator();
 
   setupPathSwitcher();
   applyCareerPath("all");

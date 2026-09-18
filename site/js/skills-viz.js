@@ -54,7 +54,7 @@ function hexToRgba(hex, alpha) {
 
 function getColors() {
   const styles = getComputedStyle(document.documentElement);
-  const accent = styles.getPropertyValue("--accent").trim() || "#4fd1c5";
+  const accent = styles.getPropertyValue("--accent").trim() || "#a855f7";
   const textDim = styles.getPropertyValue("--text-dim").trim() || "#9aa5b8";
   const border = styles.getPropertyValue("--border").trim() || "#232b3d";
   return { accent, textDim, border };

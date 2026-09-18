@@ -78,17 +78,17 @@ async function main() {
     sheet.appendChild(line);
   });
 
-  // References
-  if (data.references && data.references.length) {
-    sheet.appendChild(el("h2", null, "Professional References"));
-    const refLine = el(
-      "div",
-      "ref-line",
-      data.references.map((r) => `<strong>${r.name}</strong> (${r.title})`).join(" &middot; ") +
-      " &mdash; <em>Contact details available upon request.</em>"
-    );
-    sheet.appendChild(refLine);
-  }
+  // References (Privacy-safe: Available upon request)
+  sheet.appendChild(el("h2", null, "Professional References"));
+  const refText =
+    (data.references && data.references.statement) ||
+    "Professional references from manufacturing and engineering leadership are available upon request.";
+  const refLine = el(
+    "div",
+    "ref-line",
+    `<em>${refText}</em> &mdash; Direct contact available via <a href="mailto:${profile.email}">${profile.email}</a>`
+  );
+  sheet.appendChild(refLine);
 
   document.getElementById("status").style.display = "none";
   sheet.style.display = "block";

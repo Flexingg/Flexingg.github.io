@@ -6,9 +6,9 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
-const PART_COLOR = 0x4fd1c5;
-const BOLT_COLOR = 0x8a94a6;
-const SHAFT_COLOR = 0xc9cfda;
+const PART_COLOR = 0x8b5cf6;
+const BOLT_COLOR = 0x94a3b8;
+const SHAFT_COLOR = 0xcfd6e0;
 
 export function initCadViewer() {
   const holder = document.getElementById("cad-canvas-holder");
@@ -33,7 +33,7 @@ export function initCadViewer() {
   const key = new THREE.DirectionalLight(0xffffff, 0.9);
   key.position.set(5, 8, 4);
   scene.add(key);
-  const rim = new THREE.DirectionalLight(0x4fd1c5, 0.4);
+  const rim = new THREE.DirectionalLight(0x8b5cf6, 0.4);
   rim.position.set(-6, 2, -4);
   scene.add(rim);
 
