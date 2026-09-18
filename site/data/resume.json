@@ -1,0 +1,142 @@
+{
+  "profile": {
+    "name": "Jonathan Randall",
+    "title": "Mechanical Engineer",
+    "tagline": "Mechanical engineer who ships software — CAD by day, code by night.",
+    "location": "PLACEHOLDER, USA",
+    "email": "j03randall@gmail.com",
+    "phone": "PLACEHOLDER (555) 555-5555",
+    "links": {
+      "github": "https://github.com/Flexingg",
+      "linkedin": "https://www.linkedin.com/in/PLACEHOLDER"
+    }
+  },
+  "summary": "PLACEHOLDER SUMMARY — Mechanical engineer with hands-on plant/manufacturing experience, comfortable moving between CAD, hardware, and code. Builds internal tools (CMMS integrations, project trackers, automation scripts) to solve problems that off-the-shelf software doesn't. Replace this paragraph with 3–4 sentences on your actual background.",
+  "experience": [
+    {
+      "role": "PLACEHOLDER — Mechanical Engineer",
+      "company": "Placeholder Manufacturing Co.",
+      "location": "Placeholder, USA",
+      "start": "2023",
+      "end": "Present",
+      "bullets": [
+        "Placeholder: designed/maintained mechanical systems for PLACEHOLDER process, replace with a real scope + scale (throughput, tolerance, uptime, etc.)",
+        "Placeholder: built an internal tool (e.g. work-order/CMMS integration) that automated PLACEHOLDER, cutting PLACEHOLDER metric by PLACEHOLDER%",
+        "Placeholder: led PLACEHOLDER project from concept through commissioning, coordinating with PLACEHOLDER stakeholders"
+      ]
+    },
+    {
+      "role": "PLACEHOLDER — Prior Role",
+      "company": "Placeholder Co.",
+      "location": "Placeholder, USA",
+      "start": "2021",
+      "end": "2023",
+      "bullets": [
+        "Placeholder bullet describing a real accomplishment with a number in it",
+        "Placeholder bullet — tie to a project shown in the explorer below if possible"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Placeholder University",
+      "degree": "B.S. Mechanical Engineering",
+      "start": "2017",
+      "end": "2021",
+      "details": "Placeholder — relevant coursework, senior design project, honors, etc."
+    }
+  ],
+  "certifications": [
+    "PLACEHOLDER — e.g. EIT / FE, Six Sigma, PLC certification"
+  ],
+  "skills": {
+    "radar": [
+      { "label": "CAD / Design", "value": 90 },
+      { "label": "GD&T / Tolerancing", "value": 75 },
+      { "label": "FEA / Analysis", "value": 65 },
+      { "label": "Software Dev", "value": 80 },
+      { "label": "Automation / PLC", "value": 60 },
+      { "label": "Project Mgmt", "value": 70 }
+    ],
+    "categories": [
+      {
+        "name": "Mechanical",
+        "items": [
+          { "label": "SolidWorks / CAD", "level": 90 },
+          { "label": "GD&T", "level": 75 },
+          { "label": "FEA (static/thermal)", "level": 65 },
+          { "label": "DFM / DFA", "level": 70 }
+        ]
+      },
+      {
+        "name": "Software",
+        "items": [
+          { "label": "Python", "level": 80 },
+          { "label": "JavaScript", "level": 65 },
+          { "label": "SQL", "level": 60 },
+          { "label": "REST APIs / integrations", "level": 75 }
+        ]
+      },
+      {
+        "name": "Plant / Manufacturing",
+        "items": [
+          { "label": "CMMS / Work Orders", "level": 85 },
+          { "label": "PLC / Controls basics", "level": 55 },
+          { "label": "Root cause analysis", "level": 75 }
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "cmms-integration",
+      "title": "CMMS Work-Order Integration (placeholder)",
+      "category": "Software",
+      "tags": ["Python", "API", "Automation"],
+      "summary": "Built an integration layer against a plant CMMS to automate work-order creation and reporting.",
+      "description": "Placeholder description — replace with real scope. Example shape: reverse-engineered an internal API, built a client library, and automated a workflow that used to be manual data entry.",
+      "highlights": [
+        "Placeholder metric, e.g. saved N hours/week of manual entry",
+        "Placeholder: handled auth/session/token lifecycle",
+        "Placeholder: shipped with an offline mock server for safe testing"
+      ]
+    },
+    {
+      "id": "bracket-redesign",
+      "title": "Pillow-Block Bracket Redesign (placeholder)",
+      "category": "Mechanical Design",
+      "tags": ["SolidWorks", "FEA", "DFM"],
+      "summary": "Redesigned a recurring-failure mounting bracket to cut cost and eliminate a fatigue failure mode.",
+      "description": "Placeholder — the 3D viewer below shows a simplified parametric version of this kind of assembly (base plate, support walls, shaft, bolts). Swap in your real STL/STEP model when ready.",
+      "highlights": [
+        "Placeholder: FEA showed PLACEHOLDER stress concentration at fillet",
+        "Placeholder: redesign reduced part cost by PLACEHOLDER%",
+        "Placeholder: zero failures in PLACEHOLDER months post-install"
+      ]
+    },
+    {
+      "id": "line-tracker",
+      "title": "Production Line Downtime Tracker (placeholder)",
+      "category": "Software",
+      "tags": ["JavaScript", "Dashboard", "Data"],
+      "summary": "Lightweight dashboard for tracking line downtime causes and trends.",
+      "description": "Placeholder — describe the real tool: data source, who used it, what decision it changed.",
+      "highlights": [
+        "Placeholder: surfaced top-3 downtime causes for weekly review",
+        "Placeholder: adopted by PLACEHOLDER team"
+      ]
+    },
+    {
+      "id": "beam-calc",
+      "title": "Interactive Beam Deflection Tool (this site)",
+      "category": "Analysis",
+      "tags": ["JavaScript", "Engineering Calc"],
+      "summary": "The live beam calculator on this page — built to show engineering math and code together.",
+      "description": "A real tool, not a placeholder: try the Beam Deflection Calculator section below. It computes deflection and bending stress for simply-supported or cantilever beams under point or distributed loads.",
+      "highlights": [
+        "Closed-form Euler-Bernoulli beam equations, not a canned library",
+        "Live-updating deflection curve as you change inputs"
+      ]
+    }
+  ]
+}

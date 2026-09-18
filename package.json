@@ -1,0 +1,12 @@
+{
+  "name": "resume-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:pdf": "node scripts/build-pdf.js",
+    "serve": "python3 -m http.server 8080 --directory site"
+  },
+  "devDependencies": {
+    "puppeteer": "^23.11.1"
+  }
+}

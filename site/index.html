@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jonathan Randall — Mechanical Engineer</title>
+<meta name="description" content="Mechanical engineer resume with interactive CAD viewer, project explorer, and live engineering calculators." />
+<link rel="stylesheet" href="css/main.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <div class="brand" id="nav-brand">Loading…</div>
+    <div class="links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#cad">CAD Viewer</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn btn-small" href="resume-print.html" target="_blank" rel="noopener">Print / PDF view</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <section class="hero" id="top">
+    <div class="placeholder-note">This site is scaffolded with placeholder content — swap in real details in data/resume.json</div>
+    <h1 id="hero-name">—</h1>
+    <div class="title" id="hero-title">—</div>
+    <p class="tagline" id="hero-tagline">—</p>
+    <div class="actions">
+      <a class="btn" id="download-pdf" href="assets/resume.pdf" download>Download PDF Resume</a>
+      <a class="btn btn-ghost" id="link-github" href="#" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" id="link-linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-head">
+      <div class="eyebrow">About</div>
+      <h2>Summary</h2>
+    </div>
+    <p id="summary-text" class="card"></p>
+  </section>
+
+  <section id="experience">
+    <div class="section-head">
+      <div class="eyebrow">Career</div>
+      <h2>Experience</h2>
+    </div>
+    <div class="timeline" id="experience-list"></div>
+  </section>
+
+  <section id="skills">
+    <div class="section-head">
+      <div class="eyebrow">Capabilities</div>
+      <h2>Skills</h2>
+      <p>Core competencies at a glance, plus a detailed breakdown by discipline.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="card">
+        <canvas id="skills-radar" height="260"></canvas>
+      </div>
+      <div id="skills-categories"></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-head">
+      <div class="eyebrow">Portfolio</div>
+      <h2>Project Explorer</h2>
+      <p>Filter by discipline, click a card for details.</p>
+    </div>
+    <div class="filter-bar" id="project-filters"></div>
+    <div class="project-grid" id="project-grid"></div>
+  </section>
+
+  <section id="cad">
+    <div class="section-head">
+      <div class="eyebrow">Interactive</div>
+      <h2>Parametric CAD Viewer</h2>
+      <p>A simplified pillow-block bracket assembly, built from primitives — drag to orbit, scroll to zoom. Swap in a real STL/STEP model once you have one worth showing.</p>
+    </div>
+    <div class="cad-wrap">
+      <div id="cad-canvas-holder">
+        <span class="cad-hint">drag to orbit · scroll to zoom</span>
+      </div>
+      <div class="cad-controls card">
+        <div>
+          <label for="cad-explode">Explode view</label>
+          <input type="range" id="cad-explode" min="0" max="1" step="0.01" value="0" />
+        </div>
+        <div>
+          <label><input type="checkbox" id="cad-wireframe" /> Wireframe</label>
+        </div>
+        <div>
+          <label><input type="checkbox" id="cad-autorotate" /> Auto-rotate</label>
+        </div>
+        <button class="btn btn-ghost btn-small" id="cad-reset">Reset view</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="calculator">
+    <div class="section-head">
+      <div class="eyebrow">Interactive</div>
+      <h2>Beam Deflection Calculator</h2>
+      <p>Closed-form Euler-Bernoulli solution for a rectangular-section beam. Change any input and the diagram updates live.</p>
+    </div>
+    <div class="calc-wrap">
+      <form class="calc-form card" id="beam-form">
+        <div class="field">
+          <label for="beam-type">Beam type</label>
+          <select id="beam-type">
+            <option value="simple">Simply supported</option>
+            <option value="cantilever">Cantilever</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="beam-load-type">Load type</label>
+          <select id="beam-load-type">
+            <option value="point">Point load</option>
+            <option value="distributed">Uniformly distributed</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="beam-length">Length L (m)</label>
+          <input type="number" id="beam-length" value="1.5" min="0.1" step="0.1" />
+        </div>
+        <div class="field">
+          <label id="beam-load-label" for="beam-load">Point load P (N)</label>
+          <input type="number" id="beam-load" value="500" step="10" />
+        </div>
+        <div class="field">
+          <label for="beam-material">Material</label>
+          <select id="beam-material">
+            <option value="steel">Steel (E = 200 GPa)</option>
+            <option value="aluminum">Aluminum (E = 69 GPa)</option>
+            <option value="titanium">Titanium (E = 114 GPa)</option>
+            <option value="custom">Custom</option>
+          </select>
+        </div>
+        <div class="field" id="beam-custom-e-wrap" style="display:none;">
+          <label for="beam-custom-e">Custom E (GPa)</label>
+          <input type="number" id="beam-custom-e" value="200" step="1" />
+        </div>
+        <div class="field">
+          <label for="beam-width">Section width b (mm)</label>
+          <input type="number" id="beam-width" value="20" min="1" step="1" />
+        </div>
+        <div class="field">
+          <label for="beam-height">Section height h (mm)</label>
+          <input type="number" id="beam-height" value="30" min="1" step="1" />
+        </div>
+      </form>
+      <div>
+        <div class="calc-results">
+          <div class="calc-result-tile">
+            <div class="num" id="beam-deflection-result">–</div>
+            <div class="lbl">Max deflection</div>
+          </div>
+          <div class="calc-result-tile">
+            <div class="num" id="beam-stress-result">–</div>
+            <div class="lbl">Max bending stress</div>
+          </div>
+          <div class="calc-result-tile">
+            <div class="num" id="beam-moment-result">–</div>
+            <div class="lbl">Max moment</div>
+          </div>
+        </div>
+        <canvas id="beam-canvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="section-head">
+      <div class="eyebrow">Background</div>
+      <h2>Education & Certifications</h2>
+    </div>
+    <div class="timeline" id="education-list"></div>
+    <ul id="certifications-list" style="color:var(--text-dim); margin-top:16px;"></ul>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div>Get in touch: <a id="footer-email" href="#"></a></div>
+    <div class="footer-links">
+      <a id="footer-github" href="#" target="_blank" rel="noopener">GitHub</a>
+      <a id="footer-linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div style="margin-top:12px;">&copy; <span id="footer-year"></span></div>
+  </div>
+</footer>
+
+<div class="modal-backdrop" id="project-modal-backdrop">
+  <div class="modal">
+    <button class="close-btn" id="modal-close-btn" aria-label="Close">&times;</button>
+    <h3 id="modal-title"></h3>
+    <div class="tag-row" id="modal-tags" style="margin-bottom:12px;"></div>
+    <p id="modal-description"></p>
+    <ul id="modal-highlights"></ul>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
