@@ -23,11 +23,11 @@ async function main() {
     profile.phone,
     `<a href="mailto:${profile.email}">${profile.email}</a>`,
   ];
-  if (profile.links.portfolio) {
-    contactParts.push(`<a href="${profile.links.portfolio}">resume.randall.engineering</a>`);
+  if (profile.links && profile.links.portfolio && profile.links.portfolio.startsWith("http")) {
+    contactParts.push(`<a href="${profile.links.portfolio}">${profile.links.portfolio.replace(/^https?:\/\//, "")}</a>`);
   }
-  if (profile.links.github) {
-    contactParts.push(`<a href="${profile.links.github}">${profile.links.github.replace("https://", "")}</a>`);
+  if (profile.links && profile.links.github && profile.links.github.startsWith("http")) {
+    contactParts.push(`<a href="${profile.links.github}">${profile.links.github.replace(/^https?:\/\//, "")}</a>`);
   }
 
   header.appendChild(el("div", "contact", contactParts.join(" &middot; ")));

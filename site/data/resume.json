@@ -1,24 +1,24 @@
 {
   "profile": {
     "name": "Jonathan Randall",
-    "title": "Senior Mechanical & Systems Engineer",
-    "tagline": "Combining mechanical engineering principles with software automation to direct $18M in CapEx & maintenance budgets, oversee 3 plant shops, and ensure 24/7 facility reliability.",
-    "location": "Augusta, GA",
+    "title": "Senior Mechanical Engineer",
+    "tagline": "A mechanical engineer that can listen to others, understand complex failures, lead cross functional teams through new projects and deep root cause investigations. With a passion for reliability and maintenance friendly designs and processes, and experience in a wide variety of responsibilities.",
+    "location": "Trenton, SC",
     "email": "j03randall@gmail.com",
     "phone": "1.864.323.7353",
     "links": {
       "github": "https://github.com/Flexingg",
-      "portfolio": "https://resume.randall.engineering/jonathanrandall/mechanical"
+      "portfolio": "Coming soon."
     }
   },
   "kpis": [
     {
-      "num": "$18M Budget",
-      "lbl": "$8M CapEx · $9M Maint · $1M CI"
+      "num": "Responsible for over $22M",
+      "lbl": "$12M CapEx · $8M Maint · $2M CI"
     },
     {
       "num": "3 Shops",
-      "lbl": "Machine, Drum & Fabrication"
+      "lbl": "Ran Machine, Fabrication, and Drum (Specialized Tooling) Shops"
     },
     {
       "num": "24 / 7",
@@ -35,31 +35,31 @@
       "shortName": "Overview",
       "badge": "Mechanical & Systems Engineer",
       "title": "Senior Mechanical Engineer",
-      "tagline": "Combines mechanical engineering principles with modern programming capabilities to direct $18M in capital/maintenance budgets, manage 3 production shops, and drive operational excellence.",
-      "summary": "Results-driven Senior Mechanical Engineer with experience directing heavy industrial manufacturing and nuclear facilities. In charge of 3 plant shops (Machine, Drum, Fabrication) with direct oversight of an $18M budget portfolio ($8M CapEx, $9M maintenance parts & labor, $1M continuous improvement). Combines mechanical engineering rigor with modern programming to optimize equipment reliability, mentor incoming engineers, and deliver high-stakes capital modernizations on schedule.",
+      "tagline": "Combines mechanical engineering principles with modern programming capabilities to direct $22M in capital/maintenance budgets, manage 3 production shops, and drive operational excellence.",
+      "summary": "Results-driven Mechanical Engineer with experience directing heavy industrial manufacturing facilities. In charge of 3 plant shops (Machine, Drum, Fabrication) with direct oversight of an $22M budget portfolio ($12M CapEx, $8M maintenance parts & labor, $2M continuous improvement). Focused on optimizing equipment reliability while working with maintenance & operations to ensure all teams are satisfied with results, mentor incoming engineers, and deliver high-stakes capital modernizations on schedule without compromising installation integrity.",
       "radar": [
-        { "label": "Shop Operations (3 Shops)", "value": 96 },
-        { "label": "Budget Mgmt ($18M)", "value": 95 },
-        { "label": "Machine Design & GD&T", "value": 92 },
-        { "label": "Systems Safety & Nuclear", "value": 90 },
-        { "label": "Thermal & Heat Transfer", "value": 86 },
-        { "label": "Software & Automation", "value": 84 }
+        { "label": "Shop Operations (3 Shops)", "value": 86 },
+        { "label": "Budget Mgmt ($22M)", "value": 52 },
+        { "label": "Machine Design", "value": 90 },
+        { "label": "Documentation", "value": 76 },
+        { "label": "Thermal & Heat Transfer", "value": 69 },
+        { "label": "Software & Automation", "value": 44 }
       ]
     },
     "management": {
       "name": "Engineering Management",
-      "shortName": "Management · $18M Portfolio",
-      "badge": "Engineering Management & $18M Portfolio",
+      "shortName": "Management · $22M Portfolio",
+      "badge": "Engineering Management & $22M Portfolio",
       "title": "Engineering Project Manager & Technical Leader",
-      "tagline": "Directing an $18M portfolio ($8M CapEx, $9M maintenance parts & labor, $1M CI), overseeing 3 manufacturing shops, and mentoring engineering teams.",
-      "summary": "Engineering leader with proven operational ownership across 3 plant shops (Machine Shop, Drum Shop, Fabrication Shop) and direct stewardship of an $18M financial portfolio ($8M in capital execution, $9M in maintenance parts/labor, and $1M in continuous improvement). Experienced mentoring 4 engineering interns and leading cross-functional teams of certified welders, machinists, and multi-trade contractors. Expert in SAP PM/ERP workflows, CapEx delivery, and cross-facility consultation.",
+      "tagline": "Directing an $22M portfolio ($12M CapEx, $8M maintenance parts & labor, $2M CI), overseeing 3 manufacturing shops, and mentoring new and existing engineering teams.",
+      "summary": "Engineering leader with proven operational ownership across 3 plant shops (Machine Shop, Drum Shop, Fabrication Shop) and direct stewardship of an $22M financial portfolio ($12M in capital execution, $8M in maintenance parts/labor, and $2M in continuous improvement). Guided by servant leadership principles—listening to technicians and trades, building cross-functional trust between engineering and plant operations, mentoring 4 engineering interns, and leading multi-trade contractors with humility and high execution integrity.",
       "radar": [
-        { "label": "Financial Portfolio ($18M)", "value": 96 },
-        { "label": "Shop Leadership (3 Shops)", "value": 95 },
+        { "label": "Financial Portfolio ($22M)", "value": 56 },
+        { "label": "Shop Leadership (3 Shops)", "value": 85 },
         { "label": "Intern & Team Mentorship", "value": 92 },
-        { "label": "CapEx Execution ($8M)", "value": 95 },
-        { "label": "Contractor & Labor Mgmt", "value": 92 },
-        { "label": "SAP PM / Enterprise ERP", "value": 90 }
+        { "label": "CapEx Execution ($12M)", "value": 45 },
+        { "label": "Contractor & Labor Mgmt", "value": 98 },
+        { "label": "SAP PM / Enterprise ERP", "value": 87 }
       ]
     },
     "systems": {
@@ -67,15 +67,15 @@
       "shortName": "Systems Engineering",
       "badge": "Senior Systems & Process Engineer",
       "title": "Senior Systems & Process Engineer",
-      "tagline": "Designing safe, high-reliability mechanical, nuclear, and tooling systems through root-cause failure analysis, GD&T, and process modernization.",
-      "summary": "Systems engineer with deep background spanning high-stakes nuclear facilities (Savannah River Nuclear Solutions) and heavy continuous manufacturing (Bridgestone). Leads technical governance across Machine, Drum, and Fabrication shops, enforcing tight GD&T tolerancing, dynamic balancing, and safe operating envelope design. Skilled in closed-form physical modeling, root cause failure analysis (RCA), and translating complex requirements into reliable plant systems.",
+      "tagline": "Designing safe, high-reliability mechanical, electrical, and tooling systems through root-cause failure analysis and optimizations for reliability & maintainability.",
+      "summary": "Systems engineer with deep background spanning high-stakes nuclear facilities (Savannah River Nuclear Solutions) and heavy continuous manufacturing (Bridgestone). Great at leading teams and changing culture to a positive atmosphere that has a 'will get it done' attitude. Skilled in modeling, root cause failure analysis, and translating complex requirements into reliable plant systems with lower cost and simple, maintainable solutions.",
       "radar": [
         { "label": "Safe System Design", "value": 95 },
-        { "label": "Tooling & Drum Systems", "value": 94 },
-        { "label": "Failure Analysis & RCA", "value": 92 },
-        { "label": "GD&T & Precision Machining", "value": 92 },
-        { "label": "Process Modernization", "value": 90 },
-        { "label": "Technical Documentation", "value": 88 }
+        { "label": "Tooling & Drum Systems", "value": 74 },
+        { "label": "Failure Analysis & RCA", "value": 88 },
+        { "label": "GD&T & Precision Machining", "value": 67 },
+        { "label": "Process Modernization", "value": 50 },
+        { "label": "Technical Documentation", "value": 73 }
       ]
     },
     "datacenter": {
@@ -83,19 +83,19 @@
       "shortName": "Data Center & Facilities",
       "badge": "Critical Facilities & Thermal Infrastructure",
       "title": "Critical Facilities & Infrastructure Engineer",
-      "tagline": "Specializing in 24/7 continuous operations, industrial heat transfer & cooling, maintenance logistics ($9M parts/labor), and mechanical plant reliability.",
-      "summary": "Mechanical and systems engineer specializing in 24/7 mission-critical uptime, industrial heat transfer systems, and facility reliability. Serves as 24/7 on-call technical authority for plant mechanical systems, directing $9M in maintenance parts and labor to maximize equipment availability. Background includes thermodynamics and energy savings research at Savannah River Nuclear Solutions, paired with in-house fabrication and machining support for rapid failure remediation.",
+      "tagline": "Specializing in 24/7 continuous operations, industrial heat transfer & cooling, maintenance logistics ($8M parts/labor), and cross-team mechanical reliability.",
+      "summary": "Mechanical and systems engineer specializing in 24/7 mission-critical uptime, industrial heat transfer systems, and facility reliability. Serves as 24/7 on-call technical authority for plant mechanical systems, directing an $8M maintenance parts and labor budget to maximize equipment availability. Combines hands-on floor collaboration with technicians and trades, thermodynamic research at Savannah River Nuclear Solutions, and in-house fabrication support for rapid, permanent failure remediation.",
       "radar": [
         { "label": "24/7 Critical Uptime", "value": 96 },
-        { "label": "Maint. Parts & Labor ($9M)", "value": 94 },
-        { "label": "Heat Transfer & Cooling", "value": 92 },
-        { "label": "Plant Mechanical Reliability", "value": 95 },
-        { "label": "Failure Analysis & RCA", "value": 90 },
-        { "label": "Predictive Automation", "value": 85 }
+        { "label": "Maint. Parts & Labor ($8M)", "value": 88 },
+        { "label": "Heat Transfer & Cooling", "value": 69 },
+        { "label": "Cross-Team Floor Reliability", "value": 94 },
+        { "label": "Root Cause Failure Analysis", "value": 88 },
+        { "label": "Predictive Maintenance", "value": 65 }
       ]
     }
   },
-  "summary": "Results-driven Senior Mechanical Engineer with experience directing heavy industrial manufacturing and nuclear facilities. In charge of 3 plant shops (Machine, Drum, Fabrication) with direct oversight of an $18M budget portfolio ($8M CapEx, $9M maintenance parts & labor, $1M continuous improvement). Combines mechanical engineering rigor with modern programming to optimize equipment reliability, mentor incoming engineers, and deliver high-stakes capital modernizations on schedule.",
+  "summary": "Results-driven Senior Mechanical Engineer with experience directing heavy industrial manufacturing facilities and nuclear operations. In charge of 3 plant shops (Machine, Drum, Fabrication) with direct stewardship of an $22M budget portfolio ($12M CapEx, $8M maintenance parts & labor, $2M continuous improvement). Grounded in servant leadership, active listening, and cross-functional team cohesion—bridging engineering, maintenance, and floor operations to solve complex failures, mentor incoming engineers, and deliver high-stakes capital modernizations on schedule without compromising installation integrity.",
   "experience": [
     {
       "role": "Senior Mechanical Engineer (Promoted 2024)",
@@ -106,27 +106,31 @@
       "overview": "Directing engineering services, shop operations, and capital programs for global rubber mixing manufacturing operations at the Bridgestone Americas Aiken Off Road Radial Tire plant.",
       "bullets": [
         {
-          "text": "Promoted to Senior Mechanical Engineer in 2024 to direct operations across 3 manufacturing shops: Machine Shop, Drum Shop, and Fabrication Shop.",
+          "text": "Promoted to Senior Mechanical Engineer in 2024 to direct operations across 3 manufacturing shops: Machine Shop, Drum Shop (specialized tire tooling), and Fabrication Shop.",
           "paths": ["management", "systems", "datacenter"]
         },
         {
-          "text": "Managed an $18M financial portfolio comprising $8M in capital expenditure (CapEx) projects, a $9M maintenance parts & labor budget, and $1M in plant improvement initiatives.",
+          "text": "Steward an $22M financial portfolio comprising $12M in capital expenditure (CapEx) execution, an $8M maintenance parts & labor budget, and $2M in plant continuous improvement initiatives.",
           "paths": ["management", "datacenter", "systems"]
         },
         {
-          "text": "Mentored and supervised 4 engineering interns, while directing multi-trade contractors, certified welders, machinists, and plant maintenance personnel.",
-          "paths": ["management"]
+          "text": "Champion servant leadership by mentoring 4 engineering interns and actively seeking insights from machinists, certified welders, and floor technicians to solve chronic machine failures.",
+          "paths": ["management", "systems"]
         },
         {
-          "text": "Modernized heavy process equipment and tire-building tooling utilizing CNC machining, precision drum dynamic balancing, welding standards, and tight GD&T tolerancing.",
+          "text": "Cultivated a collaborative, positive team atmosphere across engineering, maintenance, and operations, building consensus on complex overhauls to ensure high installation integrity without schedule slip.",
+          "paths": ["management", "systems"]
+        },
+        {
+          "text": "Modernized process equipment and tire-building drum tooling utilizing CNC machining, dynamic balancing, welding standards, and practical GD&T optimized for maintainability and reliability.",
           "paths": ["systems", "management"]
         },
         {
-          "text": "Optimized spare parts inventory and work-order management through SAP PM / CMMS, cutting maintenance turnaround times and reducing operational downtime.",
+          "text": "Optimized spare parts inventory and work-order management through SAP PM / CMMS, partnering closely with maintenance crews to reduce turnaround times and operational downtime.",
           "paths": ["management", "datacenter", "systems"]
         },
         {
-          "text": "Serve as 24/7 technical authority for plant mechanical systems, leading root-cause failure analysis (RCA) and risk mitigation across global manufacturing operations.",
+          "text": "Serve as 24/7 technical authority for high-stakes mechanical systems, leading cross-functional root-cause failure analysis (RCA) to deliver robust, simple, cost-effective engineering fixes.",
           "paths": ["datacenter", "systems"]
         }
       ]
@@ -140,7 +144,7 @@
       "overview": "Provided systems engineering for critical nuclear materials processing and facility operations.",
       "bullets": [
         {
-          "text": "Engineered safe mechanical system designs and standard operating procedures for nuclear materials processing facilities.",
+          "text": "Engineered safe mechanical system designs and standard operating procedures for critical nuclear materials processing facilities.",
           "paths": ["systems", "datacenter"]
         },
         {
@@ -148,11 +152,11 @@
           "paths": ["datacenter", "systems"]
         },
         {
-          "text": "Developed continuous improvement and reliability projects that reduced equipment maintenance downtime.",
+          "text": "Collaborated across multi-department teams to implement continuous improvement projects that reduced equipment maintenance downtime.",
           "paths": ["management", "systems", "datacenter"]
         },
         {
-          "text": "Delivered cross-departmental technical consultation, translating complex stakeholder requirements into validated engineering solutions.",
+          "text": "Provided humble, multi-discipline technical consultation—listening to diverse stakeholder concerns to translate complex nuclear requirements into practical, reliable systems.",
           "paths": ["management", "systems"]
         }
       ]
@@ -176,36 +180,36 @@
   "skills": {
     "categories": [
       {
+        "name": "Leadership & Team Collaboration",
+        "items": [
+          { "label": "Cross-Functional Team Leadership", "level": 95 },
+          { "label": "Active Listening & Floor Insights", "level": 96 },
+          { "label": "Servant Leadership & Mentorship (4 Interns)", "level": 92 },
+          { "label": "Maintenance & Operations Consensus Building", "level": 94 },
+          { "label": "Contractor & Trades Partnership", "level": 98 },
+          { "label": "Positive Team Culture Development", "level": 90 }
+        ]
+      },
+      {
         "name": "Mechanical Engineering & Tooling",
         "items": [
-          { "label": "Machine Design & CAD (SolidWorks/Creo)", "level": 94 },
-          { "label": "CNC Machining & CAM Operations", "level": 90 },
-          { "label": "Drum Shop & Precision Balancing", "level": 92 },
-          { "label": "Fabrication & Welding Standards", "level": 91 },
-          { "label": "GD&T & Dimensional Inspection", "level": 92 },
-          { "label": "Root Cause Analysis (RCA)", "level": 94 }
+          { "label": "Machine Design", "level": 90 },
+          { "label": "Shop Operations (Machine, Fab, Drum)", "level": 86 },
+          { "label": "Root Cause Failure Analysis (RCA)", "level": 88 },
+          { "label": "Tooling & Drum Systems", "level": 74 },
+          { "label": "Technical Documentation", "level": 76 },
+          { "label": "GD&T & Precision Machining", "level": 67 }
         ]
       },
       {
-        "name": "Management & Plant Operations",
-        "items": [
-          { "label": "CapEx Project Execution ($8M)", "level": 96 },
-          { "label": "Maintenance Parts & Labor ($9M)", "level": 95 },
-          { "label": "Shop Management (3 Production Shops)", "level": 95 },
-          { "label": "Intern & Personnel Mentorship", "level": 92 },
-          { "label": "SAP PM / CMMS Inventory", "level": 90 },
-          { "label": "Continuous Improvement ($1M)", "level": 92 }
-        ]
-      },
-      {
-        "name": "Systems, Critical Facilities & Code",
+        "name": "Operations, Budgets & Systems",
         "items": [
           { "label": "24/7 Plant Mechanical Authority", "level": 96 },
-          { "label": "Heat Transfer & Cooling Systems", "level": 90 },
-          { "label": "Nuclear Facility Safe Design", "level": 92 },
-          { "label": "Python Automation & Pipelines", "level": 88 },
-          { "label": "Web Applications & Tools", "level": 86 },
-          { "label": "Energy Optimization", "level": 88 }
+          { "label": "Safe System Design (Nuclear & Plant)", "level": 95 },
+          { "label": "Maintenance Parts & Labor ($8M)", "level": 88 },
+          { "label": "SAP PM / Enterprise ERP", "level": 87 },
+          { "label": "CapEx Project Execution ($12M)", "level": 45 },
+          { "label": "Thermal & Heat Transfer", "level": 69 }
         ]
       }
     ]
@@ -213,17 +217,17 @@
   "projects": [
     {
       "id": "shop-capex-management",
-      "title": "3 Production Shops & $18M Capital/Maintenance Oversight",
+      "title": "3 Production Shops & $22M Capital/Maintenance Stewardship",
       "category": "Management",
       "paths": ["management", "systems", "datacenter"],
-      "tags": ["Shop Operations", "$18M Budget", "CapEx", "SAP PM"],
-      "summary": "Directed 3 manufacturing shops (Machine, Drum, Fabrication), managed an $18M financial portfolio ($8M CapEx, $9M parts/labor, $1M CI), and mentored 4 engineering interns.",
-      "description": "Led complete operational and financial governance for critical manufacturing shops at Bridgestone Americas. Oversaw equipment maintenance budgets, spare parts supply chains in SAP PM, capital equipment modernizations, and day-to-day work-order execution across Machinists, Welders, and Fabricators.",
+      "tags": ["Shop Operations", "$22M Budget", "CapEx", "SAP PM"],
+      "summary": "Directed 3 manufacturing shops (Machine, Drum, Fabrication), stewarded an $22M financial portfolio ($12M CapEx, $8M parts/labor, $2M CI), and mentored 4 engineering interns.",
+      "description": "Led operational and financial governance for critical manufacturing shops at Bridgestone Americas. Practiced servant leadership by working side-by-side with Machinists, Welders, and Fabricators to ensure practical maintainability, manage spare parts supply chains in SAP PM, and deliver capital modernizations with zero compromise on installation integrity.",
       "highlights": [
         "In charge of Machine Shop, Drum Shop, and Fabrication Shop operations",
-        "Managed $8M in CapEx projects and $9M maintenance parts & labor budget",
-        "Supervised and mentored 4 engineering interns in heavy manufacturing",
-        "Streamlined maintenance work-orders and spare parts inventory in SAP PM"
+        "Stewarded $12M CapEx execution, $8M maintenance parts/labor, and $2M continuous improvement",
+        "Supervised and mentored 4 engineering interns, fostering a supportive learning environment",
+        "Streamlined maintenance work-orders and spare parts inventory in SAP PM through crew collaboration"
       ]
     },
     {
@@ -232,12 +236,12 @@
       "category": "Manufacturing & Tooling",
       "paths": ["systems", "management"],
       "tags": ["Drum Shop", "Machine Shop", "GD&T", "Precision Tooling"],
-      "summary": "Modernized heavy tire building drums, tooling, and fabrication workflows with CNC machining, precision balancing, and rigorous GD&T standards.",
-      "description": "Engineered custom manufacturing tooling and managed rebuild/refurbishment workflows for high-value tire building drums. Established quality inspection standards, dynamic balancing protocols, and precision machining tolerances to eliminate manufacturing variations and extend drum service life.",
+      "summary": "Modernized heavy tire building drums, tooling, and fabrication workflows with CNC machining, precision balancing, and maintainability-focused GD&T standards.",
+      "description": "Engineered custom manufacturing tooling and managed rebuild/refurbishment workflows for high-value tire building drums. Listened closely to floor operators and technicians to identify real-world ergonomic and maintenance pain points, establishing dynamic balancing protocols and achievable precision machining tolerances.",
       "highlights": [
         "Directed high-precision Drum Shop rebuilds and dynamic balancing procedures",
-        "Implemented tight GD&T tolerancing and dimensional inspection workflows",
-        "Coordinated with certified welders and machinists on custom tooling fabrication",
+        "Implemented practical GD&T tolerancing and dimensional inspection workflows",
+        "Partnered with certified welders and machinists to incorporate craft insights into tooling designs",
         "Reduced drum turnaround time and eliminated recurring tooling defects"
       ]
     },
@@ -248,27 +252,27 @@
       "paths": ["datacenter", "systems"],
       "tags": ["Heat Transfer", "Thermodynamics", "Energy Savings", "SRNS"],
       "summary": "Researched industrial heat transfer systems and energy recovery opportunities at Savannah River Nuclear Solutions to lower operational costs and improve thermal efficiency.",
-      "description": "Evaluated process heat transfer systems, thermodynamics, and energy utilization within high-stakes nuclear facilities. Modeled thermal efficiency gains, evaluated cooling fluid dynamics, and proposed continuous improvement initiatives that reduced maintenance downtime and operational energy consumption.",
+      "description": "Evaluated process heat transfer systems, thermodynamics, and energy utilization within high-stakes nuclear facilities. Modeled thermal efficiency gains, evaluated cooling fluid dynamics, and collaborated with multi-discipline engineering teams on continuous improvement initiatives.",
       "highlights": [
         "Identified heat transfer optimization and facility energy savings opportunities",
         "Ensured rigorous safe system designs and regulatory operating procedures",
-        "Formulated continuous improvement projects to reduce long-term maintenance downtime",
-        "Collaborated across specialized multi-department engineering and operations teams"
+        "Engaged cross-department personnel with humility to ensure shared alignment on safety procedures",
+        "Formulated continuous improvement projects to reduce long-term maintenance downtime"
       ]
     },
     {
       "id": "plant-reliability-24-7",
-      "title": "24/7 Plant Mechanical Systems Risk Prevention & Uptime",
+      "title": "Cross-Functional Root Cause Analysis & 24/7 Plant Reliability",
       "category": "Critical Facilities",
       "paths": ["datacenter", "systems", "management"],
       "tags": ["24/7 Operations", "Reliability", "Failure Analysis", "Safety"],
-      "summary": "Served as primary 24/7 technical authority for high-stakes rubber mixing mechanical systems, preventing unplanned downtime through proactive equipment evaluation.",
-      "description": "Provided around-the-clock engineering support and technical ownership for high-throughput heavy manufacturing equipment. Performed failure analysis, root cause investigations, and reliability engineering to eliminate chronic failure modes, protect personnel safety, and maintain high plant availability.",
+      "summary": "Served as primary 24/7 technical authority for high-stakes rubber mixing mechanical systems, solving complex failures by listening to operators and maintenance crews.",
+      "description": "Provided around-the-clock engineering support and technical ownership for high-throughput heavy manufacturing equipment. Led root-cause failure investigations with cross-functional teams—gathering frontline technician perspectives to uncover root causes and implement simple, permanent mechanical solutions.",
       "highlights": [
         "Primary 24/7 technical expert for heavy mechanical systems and emergency troubleshooting",
-        "Conducted root-cause failure analysis (RCA) and implemented permanent mechanical fixes",
-        "Developed predictive inspection procedures and updated technical engineering documentation",
-        "Managed emergency turnaround repairs with maintenance crew leaders and fabricators"
+        "Led cross-functional RCA investigations with maintenance crew leaders and fabricators",
+        "Cultivated an open, blameless problem-solving culture focused on long-term equipment reliability",
+        "Developed predictive inspection procedures and updated technical engineering documentation"
       ]
     },
     {
@@ -322,12 +326,12 @@
       "category": "Software",
       "paths": ["management", "systems", "datacenter"],
       "tags": ["Python", "Web Applications", "Data Analysis", "Automation"],
-      "summary": "Engineered modern software automations, web applications, and data analysis pipelines to streamline technical reporting and operational workflows.",
-      "description": "Combines mechanical engineering depth with full-stack programming capabilities. Developed custom automation scripts and web tools for engineering calculations, automated reporting, data visualization, and plant communication.",
+      "summary": "Engineered software automations and web tools to support cross-team communication, equipment tracking, and operational workflows.",
+      "description": "Combines mechanical engineering depth with programming capabilities. Developed custom automation scripts and web tools for engineering calculations, automated reporting, data visualization, and plant communication.",
       "highlights": [
         "Built responsive web applications and automated data collection pipelines",
         "Bridged physical plant hardware and enterprise data systems",
-        "Applies modern deep learning and algorithmic automation to complex technical problems"
+        "Created tools to empower operations and maintenance teams with clear data"
       ]
     }
   ]

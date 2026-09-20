@@ -30,19 +30,38 @@ function renderHero(data) {
     if (githubLink && profile.links && profile.links.github) githubLink.href = profile.links.github;
 
     const portfolioLink = document.getElementById("link-portfolio");
-    if (portfolioLink && profile.links && profile.links.portfolio) portfolioLink.href = profile.links.portfolio;
+    if (portfolioLink) {
+      if (profile.links && profile.links.portfolio && profile.links.portfolio.startsWith("http")) {
+        portfolioLink.href = profile.links.portfolio;
+        portfolioLink.style.display = "inline-flex";
+      } else {
+        portfolioLink.style.display = "none";
+      }
+    }
 
-    const footerEmail = document.getElementById("footer-email");
-    if (footerEmail && profile.email) {
-      footerEmail.textContent = profile.email;
-      footerEmail.href = `mailto:${profile.email}`;
+    const footerContactLine = document.getElementById("footer-contact-line");
+    if (footerContactLine) {
+      footerContactLine.innerHTML = `${profile.location} &middot; ${profile.phone} &middot; <a id="footer-email" href="mailto:${profile.email}">${profile.email}</a>`;
+    } else {
+      const footerEmail = document.getElementById("footer-email");
+      if (footerEmail && profile.email) {
+        footerEmail.textContent = profile.email;
+        footerEmail.href = `mailto:${profile.email}`;
+      }
     }
 
     const footerGithub = document.getElementById("footer-github");
     if (footerGithub && profile.links && profile.links.github) footerGithub.href = profile.links.github;
 
     const footerPortfolio = document.getElementById("footer-portfolio");
-    if (footerPortfolio && profile.links && profile.links.portfolio) footerPortfolio.href = profile.links.portfolio;
+    if (footerPortfolio) {
+      if (profile.links && profile.links.portfolio && profile.links.portfolio.startsWith("http")) {
+        footerPortfolio.href = profile.links.portfolio;
+        footerPortfolio.style.display = "inline";
+      } else {
+        footerPortfolio.style.display = "none";
+      }
+    }
   }
 
   const footerYear = document.getElementById("footer-year");
