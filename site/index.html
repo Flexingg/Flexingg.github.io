@@ -61,25 +61,8 @@
       <a class="btn btn-ghost" href="resume-print.html" target="_blank" rel="noopener">Print View</a>
     </div>
 
-    <!-- KPI Metric Cards -->
-    <div class="kpi-grid">
-      <div class="kpi-card">
-        <div class="kpi-num">$18M Budget</div>
-        <div class="kpi-lbl">$8M CapEx &middot; $9M Maint &middot; $1M CI</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-num">3 Shops</div>
-        <div class="kpi-lbl">Machine, Drum &amp; Fabrication</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-num">24 / 7</div>
-        <div class="kpi-lbl">Plant Mechanical Authority</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-num">3.87 GPA</div>
-        <div class="kpi-lbl">B.S. Mechanical Engineering</div>
-      </div>
-    </div>
+    <!-- KPI Metric Cards (Rendered Dynamically from Config) -->
+    <div class="kpi-grid" id="hero-kpis"></div>
   </section>
 
   <!-- Summary / About -->
@@ -171,6 +154,7 @@
       <a href="tools.html">Interactive Tools</a>
       <a href="resume-print.html" target="_blank" rel="noopener">Printable Resume</a>
       <a href="assets/resume.pdf" download="Jonathan_Randall_Resume.pdf">Download PDF</a>
+      <a href="data/resume.json" download="resume.json">Download Config (JSON)</a>
     </div>
     <div style="margin-top:16px; font-size:0.78rem; color:var(--text-dim);">&copy; <span id="footer-year"></span> Jonathan Randall &middot; Deployed via GitHub Pages</div>
   </div>

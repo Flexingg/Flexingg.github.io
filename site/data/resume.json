@@ -11,10 +11,28 @@
       "portfolio": "https://resume.randall.engineering/jonathanrandall/mechanical"
     }
   },
+  "kpis": [
+    {
+      "num": "$18M Budget",
+      "lbl": "$8M CapEx · $9M Maint · $1M CI"
+    },
+    {
+      "num": "3 Shops",
+      "lbl": "Machine, Drum & Fabrication"
+    },
+    {
+      "num": "24 / 7",
+      "lbl": "Plant Mechanical Authority"
+    },
+    {
+      "num": "3.87 GPA",
+      "lbl": "B.S. Mechanical Engineering"
+    }
+  ],
   "careerPaths": {
     "all": {
       "name": "Comprehensive Overview",
-      "shortName": "All",
+      "shortName": "Overview",
       "badge": "Mechanical & Systems Engineer",
       "title": "Senior Mechanical Engineer",
       "tagline": "Combines mechanical engineering principles with modern programming capabilities to direct $18M in capital/maintenance budgets, manage 3 production shops, and drive operational excellence.",
@@ -30,7 +48,7 @@
     },
     "management": {
       "name": "Engineering Management",
-      "shortName": "Management",
+      "shortName": "Management · $18M Portfolio",
       "badge": "Engineering Management & $18M Portfolio",
       "title": "Engineering Project Manager & Technical Leader",
       "tagline": "Directing an $18M portfolio ($8M CapEx, $9M maintenance parts & labor, $1M CI), overseeing 3 manufacturing shops, and mentoring engineering teams.",
@@ -46,7 +64,7 @@
     },
     "systems": {
       "name": "Systems Engineering",
-      "shortName": "Systems",
+      "shortName": "Systems Engineering",
       "badge": "Senior Systems & Process Engineer",
       "title": "Senior Systems & Process Engineer",
       "tagline": "Designing safe, high-reliability mechanical, nuclear, and tooling systems through root-cause failure analysis, GD&T, and process modernization.",
@@ -62,7 +80,7 @@
     },
     "datacenter": {
       "name": "Data Center Engineering",
-      "shortName": "Data Center",
+      "shortName": "Data Center & Facilities",
       "badge": "Critical Facilities & Thermal Infrastructure",
       "title": "Critical Facilities & Infrastructure Engineer",
       "tagline": "Specializing in 24/7 continuous operations, industrial heat transfer & cooling, maintenance logistics ($9M parts/labor), and mechanical plant reliability.",

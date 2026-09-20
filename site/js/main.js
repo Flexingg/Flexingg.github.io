@@ -19,29 +19,48 @@ function el(tag, className, html) {
 
 function renderHero(data) {
   const { profile } = data;
-  document.getElementById("hero-name").textContent = profile.name;
-  document.getElementById("nav-brand").textContent = profile.name;
+  if (profile) {
+    if (profile.title) document.title = `${profile.name} — ${profile.title}`;
+    const nameEl = document.getElementById("hero-name");
+    if (nameEl) nameEl.textContent = profile.name;
+    const brandEl = document.getElementById("nav-brand");
+    if (brandEl) brandEl.textContent = profile.name;
 
-  const githubLink = document.getElementById("link-github");
-  if (githubLink && profile.links.github) githubLink.href = profile.links.github;
+    const githubLink = document.getElementById("link-github");
+    if (githubLink && profile.links && profile.links.github) githubLink.href = profile.links.github;
 
-  const portfolioLink = document.getElementById("link-portfolio");
-  if (portfolioLink && profile.links.portfolio) portfolioLink.href = profile.links.portfolio;
+    const portfolioLink = document.getElementById("link-portfolio");
+    if (portfolioLink && profile.links && profile.links.portfolio) portfolioLink.href = profile.links.portfolio;
 
-  const footerEmail = document.getElementById("footer-email");
-  if (footerEmail) {
-    footerEmail.textContent = profile.email;
-    footerEmail.href = `mailto:${profile.email}`;
+    const footerEmail = document.getElementById("footer-email");
+    if (footerEmail && profile.email) {
+      footerEmail.textContent = profile.email;
+      footerEmail.href = `mailto:${profile.email}`;
+    }
+
+    const footerGithub = document.getElementById("footer-github");
+    if (footerGithub && profile.links && profile.links.github) footerGithub.href = profile.links.github;
+
+    const footerPortfolio = document.getElementById("footer-portfolio");
+    if (footerPortfolio && profile.links && profile.links.portfolio) footerPortfolio.href = profile.links.portfolio;
   }
-
-  const footerGithub = document.getElementById("footer-github");
-  if (footerGithub && profile.links.github) footerGithub.href = profile.links.github;
-
-  const footerPortfolio = document.getElementById("footer-portfolio");
-  if (footerPortfolio && profile.links.portfolio) footerPortfolio.href = profile.links.portfolio;
 
   const footerYear = document.getElementById("footer-year");
   if (footerYear) footerYear.textContent = new Date().getFullYear();
+
+  renderKpis(data);
+}
+
+function renderKpis(data) {
+  const container = document.getElementById("hero-kpis");
+  if (!container || !data.kpis) return;
+  container.innerHTML = "";
+  data.kpis.forEach((kpi) => {
+    const card = el("div", "kpi-card");
+    card.appendChild(el("div", "kpi-num", kpi.num));
+    card.appendChild(el("div", "kpi-lbl", kpi.lbl));
+    container.appendChild(card);
+  });
 }
 
 function applyCareerPath(pathKey) {
@@ -178,9 +197,18 @@ function setupReferences(data) {
   btn.href = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-function setupPathSwitcher() {
+function setupPathSwitcher(data) {
   const switcher = document.getElementById("path-switcher");
-  if (!switcher) return;
+  if (!switcher || !data.careerPaths) return;
+
+  switcher.innerHTML = "";
+  Object.entries(data.careerPaths).forEach(([key, path]) => {
+    const btn = el("button", "path-btn" + (key === currentPath ? " active" : ""), path.shortName || path.name);
+    btn.dataset.path = key;
+    btn.setAttribute("role", "tab");
+    btn.setAttribute("aria-selected", key === currentPath ? "true" : "false");
+    switcher.appendChild(btn);
+  });
 
   switcher.addEventListener("click", (e) => {
     const btn = e.target.closest(".path-btn");
@@ -210,7 +238,7 @@ async function main() {
   initSkillsViz(resumeData.skills);
   initProjectExplorer(resumeData.projects);
 
-  setupPathSwitcher();
+  setupPathSwitcher(resumeData);
   applyCareerPath("all");
 
   animateSkillBars();
